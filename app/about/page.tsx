@@ -1,8 +1,16 @@
 "use client";
+
+import AboutOverviewSection from "@/components/aboutPage/components/AboutOverviewSection";
+import DirectionAndValuesSection from "@/components/aboutPage/components/DirectionAndValuesSection";
+import ImpactAndPartnership from "@/components/aboutPage/components/ImpactAndPartnership";
+import OverviewSection from "@/components/aboutPage/components/ImpactAndPartnership";
+
 export default function AboutPage() {
   return (
-    <div className="min-h-screen flex items-center justify-center">
-      <h1 className="text-4xl font-bold">About Page</h1>
+    <div>
+        <AboutOverviewSection />
+        <DirectionAndValuesSection />
+       <ImpactAndPartnership />
     </div>
   );
 }
