@@ -1,8 +1,17 @@
 "use client";
+
+import ExploreAndValueSection from "@/components/sectorsPage/components/ExploreAndValueSection";
+import HeroWithCards from "@/components/sectorsPage/components/HeroWithCards";
+import SectorsAndIndustries from "@/components/sectorsPage/components/SectorsAndIndustries";
+import StrategicInvestmentGroup from "@/components/sectorsPage/components/StrategicInvestmentGroup";
+
 export default function SectorsPage() {
   return (
-    <div className="min-h-screen flex items-center justify-center">
-      <h1 className="text-4xl font-bold">Sectors Page</h1>
+    <div>
+        <SectorsAndIndustries />
+       <ExploreAndValueSection />
+       {/* <StrategicInvestmentGroup /> */}
+       <HeroWithCards />
     </div>
   );
 }
