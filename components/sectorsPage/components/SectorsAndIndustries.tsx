@@ -118,7 +118,7 @@ export default function SectorsAndIndustries() {
                             
                             {/* Card 3: Contracting */}
                             <div className="relative h-[350px] lg:h-[450px] w-full group overflow-hidden bg-black">
-                                <Image src="https://images.unsplash.com/photo-1541888086425-d81bb19240f5?q=80&w=800&auto=format&fit=crop" alt="Contracting" fill className="object-cover transition-transform duration-700 group-hover:scale-110 opacity-70" />
+                                <Image src="https://i.ibb.co.com/FLbC6y9G/6ab6a9e9c17b7e9c839ac8e52bb5643a2840bd4c-1.jpg" alt="Contracting" fill className="object-cover transition-transform duration-700 group-hover:scale-110 opacity-70" />
                                 <div className="absolute inset-0 bg-gradient-to-t from-[#0a0a0a] via-[#0a0a0a]/60 to-transparent"></div>
                                 <div className="absolute bottom-0 left-0 right-0 p-6 lg:p-8 flex flex-col justify-end h-full">
                                     <h3 className="text-lg lg:text-xl font-bold text-white mb-3">Contracting</h3>
