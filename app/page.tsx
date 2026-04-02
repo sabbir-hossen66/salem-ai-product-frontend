@@ -1,9 +1,19 @@
-
+import Navbar from '@/components/layout/Navbar'
+import Hero from '@/components/sections/Hero'
+import About from '@/components/sections/About'
+import Sectors from '@/components/sections/Sectors'
+import WhyChooseUs from '@/components/sections/WhyChooseUs'
+import Footer from '@/components/layout/Footer'
 
 export default function Home() {
   return (
-   <div>
-    <h2 className="bg-red-500 font-figtree">hello salemi</h2>
-   </div>
-  );
+    <main>
+      <Navbar />
+      {/* <Hero />
+      <About />
+      <Sectors />
+      <WhyChooseUs />
+      <Footer /> */}
+    </main>
+  )
 }
