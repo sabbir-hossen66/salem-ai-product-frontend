@@ -1,8 +1,15 @@
 "use client";
+
+import HowWeDeliverValue from "@/components/chosseUsPage/components/HowWeDeliverValue";
+import WhyChooseUs from "@/components/chosseUsPage/components/strengthsData";
+import TrustedPartnerSection from "@/components/chosseUsPage/components/TrustedPartnerSection";
+
 export default function WhyChooseUsPage() {
   return (
-    <div className="min-h-screen flex items-center justify-center">
-      <h1 className="text-4xl font-bold">Why Choose Us Page</h1>
+    <div>
+      <TrustedPartnerSection />
+      <HowWeDeliverValue />
+      <WhyChooseUs />
     </div>
   );
 }
