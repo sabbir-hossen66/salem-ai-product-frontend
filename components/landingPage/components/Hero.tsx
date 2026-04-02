@@ -5,12 +5,13 @@ export default function Hero() {
     return (
         <section className="relative w-full bg-[#fbfaf8]">
             
-            {/* Top Hero Section: Text + Image */}
+            {/* =========================================
+                1. Top Hero Section: Text + Image 
+            ========================================= */}
             <div className="relative flex flex-col lg:flex-row w-full">
                 
-                {/* 1. Left Content Area (Text) */}
+                {/* Left Content Area (Text) */}
                 <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex">
-                    {/* lg:w-[55%] দেওয়া হয়েছে যাতে টেক্সট অর্ধেকের বেশি জায়গা নেয় এবং ছবির সাথে ব্যালেন্স হয় */}
                     <div className="w-full lg:w-[55%] pt-16 pb-32 lg:pt-32 lg:pb-48 pr-0 lg:pr-12 relative z-10">
                         
                         {/* Small Overline Text */}
@@ -33,14 +34,14 @@ export default function Hero() {
 
                         {/* Buttons */}
                         <div className="flex flex-col sm:flex-row gap-4">
-                            <button className="bg-gradient-to-r from-[#745B00] to-[#FFC300] text-white px-8 py-3.5 flex justify-center items-center font-semibold hover:opacity-90 transition-opacity">
+                            <button className="bg-gradient-to-r from-[#745B00] to-[#FFC300] text-white px-8 py-3.5 flex justify-center items-center font-semibold hover:opacity-90 transition-opacity shadow-md">
                                 Explore Our Business
                                 <svg className="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
                                 </svg>
                             </button>
                             
-                            <button className="border border-[#C5A028] text-[#745B00] bg-white px-8 py-3.5 flex justify-center items-center font-semibold hover:bg-[#C5A028] hover:text-white transition-colors">
+                            <button className="border border-[#C5A028] text-[#745B00] bg-white px-8 py-3.5 flex justify-center items-center font-semibold hover:bg-[#C5A028] hover:text-white transition-colors shadow-sm">
                                 Our Vision
                                 <svg className="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
@@ -50,10 +51,10 @@ export default function Hero() {
                     </div>
                 </div>
 
-                {/* 2. Right Image Area (Desktop) - Absolutely positioned to bleed to the edge */}
+                {/* Right Image Area (Desktop) */}
                 <div className="hidden lg:block absolute top-0 right-0 w-[45%] h-full z-0">
                     <Image
-                        src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?q=80&w=1632&auto=format&fit=crop" // এখানে আপনার অরিজিনাল ছবির লিংক দিন
+                        src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?q=80&w=1632&auto=format&fit=crop"
                         alt="Business Meeting"
                         fill
                         className="object-cover object-left"
@@ -61,10 +62,10 @@ export default function Hero() {
                     />
                 </div>
                 
-                {/* 3. Mobile Image Area (Flows normally in document) */}
+                {/* Mobile Image Area */}
                 <div className="block lg:hidden w-full h-[350px] sm:h-[450px] relative z-0">
                     <Image
-                        src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?q=80&w=1632&auto=format&fit=crop" // এখানে আপনার অরিজিনাল ছবির লিংক দিন
+                        src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?q=80&w=1632&auto=format&fit=crop"
                         alt="Business Meeting"
                         fill
                         className="object-cover object-center"
@@ -73,9 +74,11 @@ export default function Hero() {
                 </div>
             </div>
 
-            {/* Overlapping Cards Section */}
-            {/* -mt-20 এবং lg:-mt-28 দিয়ে কার্ডগুলোকে ছবির ওপর ভাসমান (Overlap) করা হয়েছে */}
-            <div className="relative z-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 -mt-20 lg:-mt-28 pb-16">
+
+            {/* =========================================
+                2. Overlapping Cards Section 
+            ========================================= */}
+            <div className="relative z-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 -mt-20 lg:-mt-28 pb-16 lg:pb-24">
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8">
                     
                     {/* Card 1 */}
@@ -104,6 +107,80 @@ export default function Hero() {
 
                 </div>
             </div>
+
+
+            {/* =========================================
+                3. Statistics / Success Section with Watermarks
+            ========================================= */}
+            <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-32 pt-16 z-0 overflow-hidden lg:overflow-visible">
+                
+                {/* Huge Background 'SUCCESS' Watermark */}
+                <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-[90px] sm:text-[180px] lg:text-[260px] xl:text-[300px] font-black text-black/[0.03] select-none -z-20 pointer-events-none tracking-widest uppercase w-full text-center">
+                    SUCCESS
+                </div>
+
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-20 lg:gap-12 relative z-10">
+                    
+                    {/* Stat Item 1 */}
+                    <div className="relative flex flex-col">
+                        {/* '01' Watermark */}
+                        <span className="absolute -top-16 -left-4 sm:-left-8 text-[120px] sm:text-[150px] font-black text-black/[0.04] leading-none select-none -z-10 pointer-events-none">
+                            01
+                        </span>
+                        
+                        <div className="relative z-10">
+                            <h2 className="text-6xl sm:text-7xl font-extrabold text-gray-900 tracking-tighter">
+                                6<span className="text-[#C5A028]">+</span>
+                            </h2>
+                            <div className="w-10 h-1 bg-[#C5A028] mt-4 mb-6"></div>
+                            <h4 className="text-xl font-bold text-gray-900 mb-4">Active Sectors</h4>
+                            <p className="text-gray-600 text-sm leading-relaxed">
+                                Operating across diverse industries to ensure growth, resilience, and strong market positioning through strategic diversification and investment planning.
+                            </p>
+                        </div>
+                    </div>
+
+                    {/* Stat Item 2 */}
+                    <div className="relative flex flex-col">
+                        {/* '02' Watermark */}
+                        <span className="absolute -top-16 -left-4 sm:-left-8 text-[120px] sm:text-[150px] font-black text-black/[0.04] leading-none select-none -z-10 pointer-events-none">
+                            02
+                        </span>
+                        
+                        <div className="relative z-10">
+                            <h2 className="text-6xl sm:text-7xl font-extrabold text-gray-900 tracking-tighter">
+                                10<span className="text-[#C5A028]">+</span>
+                            </h2>
+                            <div className="w-10 h-1 bg-[#C5A028] mt-4 mb-6"></div>
+                            <h4 className="text-xl font-bold text-gray-900 mb-4">Companies Managed</h4>
+                            <p className="text-gray-600 text-sm leading-relaxed">
+                                A growing portfolio of businesses developed and optimized to deliver performance, efficiency, and long-term value across multiple sectors.
+                            </p>
+                        </div>
+                    </div>
+
+                    {/* Stat Item 3 */}
+                    <div className="relative flex flex-col">
+                        {/* '03' Watermark */}
+                        <span className="absolute -top-16 -left-4 sm:-left-8 text-[120px] sm:text-[150px] font-black text-black/[0.04] leading-none select-none -z-10 pointer-events-none">
+                            03
+                        </span>
+                        
+                        <div className="relative z-10">
+                            <h2 className="text-6xl sm:text-7xl font-extrabold text-gray-900 tracking-tighter">
+                                100%
+                            </h2>
+                            <div className="w-10 h-1 bg-[#C5A028] mt-4 mb-6"></div>
+                            <h4 className="text-xl font-bold text-gray-900 mb-4">Strategic Sectors</h4>
+                            <p className="text-gray-600 text-sm leading-relaxed">
+                                Dedicated to excellence, innovation, and operational efficiency in every project, partnership, and investment we undertake across our portfolio.
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
         </section>
     );
 }
