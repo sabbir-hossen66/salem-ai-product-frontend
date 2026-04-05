@@ -1,8 +1,11 @@
 "use client";
 import Image from 'next/image';
 import React from 'react';
+import { useLang } from '@/context/LanguageContext'; // আপনার সঠিক পাথ দিন
 
 export default function PortfolioAndStrategy() {
+    const { t } = useLang();
+
     return (
         <div className="w-full font-sans">
             
@@ -16,17 +19,17 @@ export default function PortfolioAndStrategy() {
                     <div className="flex flex-col lg:flex-row lg:justify-between lg:items-end mb-16 gap-8">
                         <div className="max-w-xl">
                             <span className="text-[#C5A028] text-xs sm:text-sm font-bold tracking-[0.2em] uppercase mb-4 block">
-                                Our Companies
+                                {t("portfolio.overline")}
                             </span>
                             <h2 className="text-4xl sm:text-5xl font-extrabold text-gray-900 tracking-tight leading-tight">
-                                A Portfolio Built for <br className="hidden sm:block" /> Growth
+                                {t("portfolio.title_part1")} <br className="hidden sm:block" /> {t("portfolio.title_part2")}
                             </h2>
                         </div>
                         
-                        {/* Right side text with left border */}
-                        <div className="lg:border-l-2 lg:border-gray-200 lg:pl-8 max-w-md">
+                        {/* Right side text with dynamic border for RTL/LTR */}
+                        <div className="lg:border-l-2 rtl:lg:border-l-0 rtl:lg:border-r-2 lg:border-gray-200 lg:pl-8 rtl:lg:pl-0 rtl:lg:pr-8 max-w-md">
                             <p className="text-gray-500 text-sm leading-relaxed">
-                                A diverse group of companies working together to deliver value, innovation, and sustainable business growth.
+                                {t("portfolio.desc")}
                             </p>
                         </div>
                     </div>
@@ -36,7 +39,7 @@ export default function PortfolioAndStrategy() {
                         
                         {/* Card 1 */}
                         <div className="flex flex-col group pt-4">
-                            <h4 className="text-[#C5A028] font-bold text-sm mb-4">01. Diverse Operations</h4>
+                            <h4 className="text-[#C5A028] font-bold text-sm mb-4">{t("portfolio.card1_num")}</h4>
                             <div className="w-full aspect-[16/10] relative mb-6 overflow-hidden">
                                 <Image 
                                     src="https://images.unsplash.com/photo-1512453979798-5ea266f8880c?q=80&w=1632&auto=format&fit=crop" 
@@ -45,16 +48,16 @@ export default function PortfolioAndStrategy() {
                                     className="object-cover transition-transform duration-500 group-hover:scale-105"
                                 />
                             </div>
-                            <h3 className="text-lg font-extrabold text-gray-900 mb-3 uppercase tracking-wide">Multi-Industry Presence</h3>
+                            <h3 className="text-lg font-extrabold text-gray-900 mb-3 uppercase tracking-wide">{t("portfolio.card1_title")}</h3>
                             <p className="text-gray-500 text-sm leading-relaxed">
-                                Companies operating across sectors including technology, services, and infrastructure.
+                                {t("portfolio.card1_desc")}
                             </p>
                         </div>
 
                         {/* Card 2 (Highlighted with Background and Top Border) */}
                         <div className="flex flex-col bg-[#FAF8F4] p-6 lg:p-8 border-t-4 border-[#C5A028] shadow-sm group">
-                            <h4 className="text-[#C5A028] font-bold text-sm mb-4">02. Operational Excellence</h4>
-                            <div className="w-full aspect-16/10 relative mb-6 overflow-hidden">
+                            <h4 className="text-[#C5A028] font-bold text-sm mb-4">{t("portfolio.card2_num")}</h4>
+                            <div className="w-full aspect-[16/10] relative mb-6 overflow-hidden">
                                 <Image 
                                     src="https://i.ibb.co.com/R47Ctrj2/81e094e712059e182faad87fa952c0e7dbbb9782.png" 
                                     alt="Office Flags"
@@ -62,15 +65,15 @@ export default function PortfolioAndStrategy() {
                                     className="object-cover transition-transform duration-500 group-hover:scale-105"
                                 />
                             </div>
-                            <h3 className="text-lg font-extrabold text-gray-900 mb-3 uppercase tracking-wide">Operational Excellence</h3>
+                            <h3 className="text-lg font-extrabold text-gray-900 mb-3 uppercase tracking-wide">{t("portfolio.card2_title")}</h3>
                             <p className="text-gray-500 text-sm leading-relaxed">
-                                Each company is structured to achieve efficiency, performance, and long-term success.
+                                {t("portfolio.card2_desc")}
                             </p>
                         </div>
 
                         {/* Card 3 */}
                         <div className="flex flex-col group pt-4">
-                            <h4 className="text-[#C5A028] font-bold text-sm mb-4">03. Growth Driven</h4>
+                            <h4 className="text-[#C5A028] font-bold text-sm mb-4">{t("portfolio.card3_num")}</h4>
                             <div className="w-full aspect-[16/10] relative mb-6 overflow-hidden">
                                 <Image 
                                     src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?q=80&w=1632&auto=format&fit=crop" 
@@ -79,9 +82,9 @@ export default function PortfolioAndStrategy() {
                                     className="object-cover transition-transform duration-500 group-hover:scale-105"
                                 />
                             </div>
-                            <h3 className="text-lg font-extrabold text-gray-900 mb-3 uppercase tracking-wide">Growth Driven</h3>
+                            <h3 className="text-lg font-extrabold text-gray-900 mb-3 uppercase tracking-wide">{t("portfolio.card3_title")}</h3>
                             <p className="text-gray-500 text-sm leading-relaxed">
-                                Focused on scaling operations and expanding into new opportunities and markets.
+                                {t("portfolio.card3_desc")}
                             </p>
                         </div>
 
@@ -111,17 +114,17 @@ export default function PortfolioAndStrategy() {
                         
                         {/* Overline Text */}
                         <span className="text-[#C5A028] text-xs sm:text-sm font-bold tracking-[0.2em] uppercase mb-5 block">
-                            Strategic Direction
+                            {t("strategy.overline")}
                         </span>
                         
                         {/* Main Heading */}
                         <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white leading-tight tracking-tight mb-8">
-                            Driving Sustainable Growth Through Structured Investment
+                            {t("strategy.title")}
                         </h2>
                         
                         {/* Description */}
                         <p className="text-gray-300 text-base sm:text-lg leading-relaxed mb-10">
-                            We adopt a disciplined investment approach focused on identifying high-potential opportunities, strengthening operational performance, and scaling businesses across strategic sectors.
+                            {t("strategy.desc")}
                         </p>
                         
                         {/* Highlighted Feature Box */}
@@ -139,10 +142,10 @@ export default function PortfolioAndStrategy() {
                             {/* Feature Text */}
                             <div>
                                 <h4 className="text-white text-sm sm:text-base font-bold tracking-wider uppercase mb-1">
-                                    Integrated Investment Model
+                                    {t("strategy.feature_title")}
                                 </h4>
                                 <p className="text-gray-400 text-xs sm:text-sm leading-relaxed">
-                                    Combining acquisition, development, and operational excellence to maximize long-term business value.
+                                    {t("strategy.feature_desc")}
                                 </p>
                             </div>
                         </div>
