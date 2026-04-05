@@ -258,4 +258,103 @@ export const translations: Record<string, Record<Language, string>> = {
   "partnership.btn_explore": { en: "Explore Sectors", ar: "استكشف القطاعات" },
   "partnership.btn_contact": { en: "Contact Our Team", ar: "تواصل مع فريقنا" },
 
+  // Approach Section
+  "approach.overline": { en: "OUR APPROACH", ar: "نهجنا" },
+  "approach.title_part1": { en: "Delivering More Than", ar: "تقديم ما هو أكثر" },
+  "approach.title_part2": { en: "Investment", ar: "من مجرد استثمار" },
+  "approach.desc": { 
+    en: "We go beyond capital by actively supporting our companies, strengthening operations, and enabling long-term growth through strategic direction and expertise.", 
+    ar: "نحن نذهب إلى ما هو أبعد من توفير رأس المال من خلال الدعم النشط لشركاتنا، وتعزيز العمليات، وتمكين النمو طويل الأجل من خلال التوجيه الاستراتيجي والخبرات." 
+  },
+  
+  "approach.card1_num": { en: "01. Active Management", ar: "01. الإدارة النشطة" },
+  "approach.card1_title": { en: "HANDS-ON INVOLVEMENT", ar: "المشاركة العملية" },
+  "approach.card1_desc": { en: "We actively support our companies by guiding operations, improving structures, and ensuring alignment with long-term strategic objectives.", ar: "نحن ندعم شركاتنا بفعالية من خلال توجيه العمليات، وتحسين الهياكل، وضمان التوافق مع الأهداف الاستراتيجية طويلة الأجل." },
+
+  "approach.card2_num": { en: "02. Strategic Growth", ar: "02. النمو الاستراتيجي" },
+  "approach.card2_title": { en: "OPERATIONAL EXCELLENCE", ar: "التميز التشغيلي" },
+  "approach.card2_desc": { en: "We prioritize sustainable expansion by identifying opportunities, optimizing performance, and building strong foundations that support continuous and scalable business growth.", ar: "نعطي الأولوية للتوسع المستدام من خلال تحديد الفرص، وتحسين الأداء، وبناء أسس قوية تدعم نمو الأعمال بشكل مستمر وقابل للتوسع." },
+
+  "approach.card3_num": { en: "03. Market Adaptability", ar: "03. القدرة على التكيف مع السوق" },
+  "approach.card3_title": { en: "FLEXIBLE APPROACH", ar: "نهج مرن" },
+  "approach.card3_desc": { en: "We adapt to changing market conditions by evolving strategies, exploring new sectors, and maintaining flexibility to ensure resilience and ongoing success.", ar: "نتكيف مع ظروف السوق المتغيرة من خلال تطوير الاستراتيجيات، واستكشاف قطاعات جديدة، والحفاظ على المرونة لضمان القدرة على الصمود والنجاح المستمر." },
+
+  // Commitment Section
+  "commitment.overline": { en: "OUR COMMITMENT", ar: "التزامنا" },
+  "commitment.title": { en: "Focused on Long-Term Success", ar: "التركيز على النجاح طويل الأجل" },
+  "commitment.desc": { 
+    en: "We are committed to building strong, sustainable businesses that deliver long-term value. Through disciplined investment strategies, operational excellence, and continuous innovation, we support our companies in achieving consistent growth and performance. Our focus remains on creating a balanced portfolio that adapts to market changes while maintaining stability. By aligning our goals with economic development, we contribute to building a stronger and more resilient business environment.", 
+    ar: "نحن ملتزمون ببناء أعمال قوية ومستدامة تقدم قيمة طويلة الأجل. من خلال استراتيجيات الاستثمار المنضبطة، والتميز التشغيلي، والابتكار المستمر، ندعم شركاتنا في تحقيق نمو وأداء متسقين. يظل تركيزنا منصباً على بناء محفظة متوازنة تتكيف مع تغيرات السوق مع الحفاظ على الاستقرار. من خلال مواءمة أهدافنا مع التنمية الاقتصادية، نساهم في بناء بيئة أعمال أقوى وأكثر مرونة." 
+  },
+
+  "commitment.point1_title": { en: "Sustainable Value", ar: "قيمة مستدامة" },
+  "commitment.point1_desc": { en: "Focused on long-term growth and consistent value creation across sectors.", ar: "التركيز على النمو طويل الأجل وخلق القيمة بشكل مستمر عبر القطاعات." },
+
+  "commitment.point2_title": { en: "Strong Foundations", ar: "أسس قوية" },
+  "commitment.point2_desc": { en: "Building resilient businesses with structured operations and clear strategic direction.", ar: "بناء أعمال مرنة تعتمد على عمليات منظمة وتوجه استراتيجي واضح." },
+
+  // Explore Companies CTA Section
+  "explore_cta.title": { en: "Explore Our Companies", ar: "استكشف شركاتنا" },
+  "explore_cta.desc": { 
+    en: "Learn more about our group of companies and how each contributes to building a strong, diversified, and high-performing investment portfolio.", 
+    ar: "تعرف أكثر على مجموعة شركاتنا وكيف تساهم كل منها في بناء محفظة استثمارية قوية ومتنوعة وعالية الأداء." 
+  },
+  "explore_cta.btn_explore": { en: "Explore Sectors", ar: "استكشف القطاعات" },
+  "explore_cta.btn_contact": { en: "Contact Our Team", ar: "تواصل مع فريقنا" },
+
+  // How We Deliver Value Section
+  "deliver.overline": { en: "OUR ADVANTAGE", ar: "ميزتنا" },
+  "deliver.title": { en: "How We Deliver Value", ar: "كيف نقدم القيمة" },
+  "deliver.watermark": { en: "INNOVAT", ar: "ابتكار" },
+
+  "deliver.step1_num": { en: "01", ar: "٠١" },
+  "deliver.step1_title": { en: "IDENTIFY", ar: "تحديد" },
+  "deliver.step1_desc": { en: "We identify high-potential opportunities aligned with market demand, long-term growth, and strategic investment value.", ar: "نحدد الفرص ذات الإمكانات العالية التي تتماشى مع طلب السوق، والنمو طويل الأجل، وقيمة الاستثمار الاستراتيجي." },
+
+  "deliver.step2_num": { en: "02", ar: "٠٢" },
+  "deliver.step2_title": { en: "DEVELOP", ar: "تطوير" },
+  "deliver.step2_desc": { en: "We enhance operations, improve performance, and build strong foundations for scalable and sustainable business growth.", ar: "نعمل على تعزيز العمليات وتحسين الأداء وبناء أسس قوية لنمو أعمال قابل للتوسع ومستدام." },
+
+  "deliver.step3_num": { en: "03", ar: "٠٣" },
+  "deliver.step3_title": { en: "EXPAND", ar: "توسيع" },
+  "deliver.step3_desc": { en: "We scale businesses into new markets and sectors to maximize reach, impact, and long-term value.", ar: "نقوم بتوسيع نطاق الأعمال في أسواق وقطاعات جديدة لزيادة الوصول والتأثير والقيمة طويلة الأجل." },
+
+  // Why Choose Us Section
+  "choose.overline": { en: "OUR STRENGTHS", ar: "نقاط قوتنا" },
+  "choose.title": { en: "Why Choose Us", ar: "لماذا تختارنا" },
+  "choose.footer": { en: "STRATEGIC BUSINESS UNIT", ar: "وحدة أعمال استراتيجية" },
+
+  "choose.card1_title": { en: "Diversification", ar: "التنوع" },
+  "choose.card1_desc": { 
+    en: "We operate across multiple sectors to reduce risk, enhance stability, and ensure consistent growth through a well-balanced investment portfolio.", 
+    ar: "نحن نعمل عبر قطاعات متعددة لتقليل المخاطر وتعزيز الاستقرار وضمان النمو المستمر من خلال محفظة استثمارية متوازنة." 
+  },
+
+  "choose.card2_title": { en: "Expertise", ar: "الخبرة" },
+  "choose.card2_desc": { 
+    en: "Strong experience in managing, developing, and scaling businesses across industries with a focus on performance and long-term value creation.", 
+    ar: "خبرة قوية في إدارة وتطوير وتوسيع نطاق الأعمال عبر الصناعات مع التركيز على الأداء وخلق القيمة طويلة الأجل." 
+  },
+
+  "choose.card3_title": { en: "Innovation", ar: "الابتكار" },
+  "choose.card3_desc": { 
+    en: "We embrace innovation and digital transformation to improve efficiency, create opportunities, and stay competitive in evolving market environments.", 
+    ar: "نتبنى الابتكار والتحول الرقمي لتحسين الكفاءة وخلق الفرص والبقاء في دائرة المنافسة في بيئات السوق المتطورة." 
+  },
+
+  "choose.card4_title": { en: "Partnerships", ar: "الشراكات" },
+  "choose.card4_desc": { 
+    en: "We build strong partnerships to expand capabilities, access new markets, and create mutually beneficial long-term business relationships.", 
+    ar: "نبني شراكات قوية لتوسيع القدرات والوصول إلى أسواق جديدة وخلق علاقات عمل طويلة الأجل متبادلة المنفعة." 
+  },
+
+  // Trusted Partner Section
+  "trusted.overline": { en: "WHY CHOOSE US", ar: "لماذا تختارنا" },
+  "trusted.title_part1": { en: "A Trusted Partner for", ar: "شريك موثوق" },
+  "trusted.title_part2": { en: "Sustainable Growth", ar: "لنمو مستدام" },
+  "trusted.desc": { 
+    en: "We combine expertise, strategy, and innovation to deliver consistent value, strong performance, and long-term business growth across sectors.", 
+    ar: "نحن نجمع بين الخبرة والاستراتيجية والابتكار لتقديم قيمة متسقة، وأداء قوي، ونمو أعمال طويل الأجل عبر القطاعات." 
+  },
+
 };

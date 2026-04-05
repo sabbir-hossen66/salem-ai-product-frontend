@@ -1,19 +1,22 @@
 "use client";
 import React from 'react';
+import { useLang } from '@/context/LanguageContext'; // সঠিক পাথ দিন
 
 const ExploreCompaniesCTA = () => {
+  const { t } = useLang();
+
   return (
     <section className="w-full bg-[#FAF8F5] py-20 md:py-28 px-6 font-sans flex justify-center items-center">
       <div className="max-w-3xl mx-auto text-center flex flex-col items-center">
         
         {/* Heading */}
         <h2 className="text-3xl md:text-4xl lg:text-5xl font-extrabold text-black mb-4 tracking-tight">
-          Explore Our Companies
+          {t("explore_cta.title")}
         </h2>
         
         {/* Description */}
         <p className="text-gray-500 text-sm md:text-base leading-relaxed mb-10 max-w-2xl">
-          Learn more about our group of companies and how each contributes to building a strong, diversified, and high-performing investment portfolio.
+          {t("explore_cta.desc")}
         </p>
 
         {/* Buttons */}
@@ -21,9 +24,10 @@ const ExploreCompaniesCTA = () => {
           
           {/* Primary Button */}
           <button className="bg-[#A48639] hover:bg-[#8e7331] text-white px-8 py-3 text-sm md:text-base font-bold transition-colors duration-300 flex items-center justify-center gap-2">
-            Explore Sectors
+            {t("explore_cta.btn_explore")}
+            {/* RTL এর জন্য আইকন ঘোরানো হয়েছে */}
             <svg 
-              className="w-4 h-4" 
+              className="w-4 h-4 rtl:rotate-180" 
               fill="none" 
               stroke="currentColor" 
               strokeWidth="2" 
@@ -36,9 +40,10 @@ const ExploreCompaniesCTA = () => {
 
           {/* Secondary Button */}
           <button className="border border-[#A48639] text-[#A48639] hover:bg-[#A48639] hover:text-white px-8 py-3 text-sm md:text-base font-bold transition-colors duration-300 flex items-center justify-center gap-2">
-            Contact Our Team
+            {t("explore_cta.btn_contact")}
+            {/* RTL এর জন্য আইকন ঘোরানো হয়েছে */}
             <svg 
-              className="w-4 h-4" 
+              className="w-4 h-4 rtl:rotate-180" 
               fill="none" 
               stroke="currentColor" 
               strokeWidth="2" 

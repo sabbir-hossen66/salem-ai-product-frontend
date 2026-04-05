@@ -1,8 +1,11 @@
 "use client";
 import React from 'react';
 import Image from 'next/image';
+import { useLang } from '@/context/LanguageContext'; // সঠিক পাথ দিন
 
 const ApproachAndCommitment = () => {
+  const { t } = useLang();
+
   return (
     <div className="w-full font-sans">
       
@@ -17,17 +20,18 @@ const ApproachAndCommitment = () => {
             {/* Left Header */}
             <div className="lg:w-1/2">
               <span className="text-[#A48639] text-xs font-bold uppercase tracking-[0.15em] block mb-3">
-                OUR APPROACH
+                {t("approach.overline")}
               </span>
               <h2 className="text-4xl md:text-5xl font-extrabold text-black leading-tight tracking-tight">
-                Delivering More Than <br className="hidden md:block" /> Investment
+                {t("approach.title_part1")} <br className="hidden md:block" /> {t("approach.title_part2")}
               </h2>
             </div>
             
             {/* Right Header Description */}
-            <div className="lg:w-1/2 lg:border-l-2 lg:border-gray-200 lg:pl-10">
+            {/* RTL এর জন্য বর্ডার এবং প্যাডিং ফ্লিপ করা হয়েছে */}
+            <div className="lg:w-1/2 lg:border-l-2 rtl:lg:border-l-0 rtl:lg:border-r-2 lg:border-gray-200 lg:pl-10 rtl:lg:pl-0 rtl:lg:pr-10">
               <p className="text-gray-600 text-base md:text-lg leading-relaxed">
-                We go beyond capital by actively supporting our companies, strengthening operations, and enabling long-term growth through strategic direction and expertise.
+                {t("approach.desc")}
               </p>
             </div>
           </div>
@@ -38,60 +42,60 @@ const ApproachAndCommitment = () => {
             {/* Card 1 */}
             <div className="p-4 md:p-6">
               <span className="text-[#A48639] font-bold text-sm mb-4 block">
-                01. Active Management
+                {t("approach.card1_num")}
               </span>
               <Image 
                 src="https://i.ibb.co.com/tMVyq4L7/312ff40b5cc7e72af91106456a784f3cddf7d4a4.jpg"
-                alt="Active Management" 
+                alt={t("approach.card1_title")} 
                 className="w-full h-48 object-cover mb-6 rounded-sm"
                 width={500}
                 height={192}
               />
               <h3 className="text-xl font-extrabold text-black uppercase mb-3">
-                HANDS-ON INVOLVEMENT
+                {t("approach.card1_title")}
               </h3>
               <p className="text-gray-500 text-sm leading-relaxed">
-                We actively support our companies by guiding operations, improving structures, and ensuring alignment with long-term strategic objectives.
+                {t("approach.card1_desc")}
               </p>
             </div>
 
             {/* Card 2 (Highlighted) */}
             <div className="bg-white p-6 shadow-xl border-t-4 border-[#A48639] transform md:-translate-y-4">
               <span className="text-[#A48639] font-bold text-sm mb-4 block">
-                02. Strategic Growth
+                {t("approach.card2_num")}
               </span>
               <Image 
                 src="https://i.ibb.co.com/4RTbdS7C/2dafa3b9ed18b296382ebd6ae2da90d6327e90ca-1.jpg"
-                alt="Strategic Growth" 
+                alt={t("approach.card2_title")} 
                 className="w-full h-48 object-cover mb-6 rounded-sm"
                 width={500}
                 height={192}
               />
               <h3 className="text-xl font-extrabold text-black uppercase mb-3">
-                OPERATIONAL EXCELLENCE
+                {t("approach.card2_title")}
               </h3>
               <p className="text-gray-500 text-sm leading-relaxed">
-                We prioritize sustainable expansion by identifying opportunities, optimizing performance, and building strong foundations that support continuous and scalable business growth.
+                {t("approach.card2_desc")}
               </p>
             </div>
 
             {/* Card 3 */}
             <div className="p-4 md:p-6">
               <span className="text-[#A48639] font-bold text-sm mb-4 block">
-                03. Market Adaptability
+                {t("approach.card3_num")}
               </span>
               <Image 
                 src="https://i.ibb.co.com/Q3vQX7LR/655c0082a387b9ae047329fbbd70eac12c778706.jpg"
-                alt="Market Adaptability" 
+                alt={t("approach.card3_title")} 
                 className="w-full h-48 object-cover mb-6 rounded-sm"
                 width={500}
                 height={192}
               />
               <h3 className="text-xl font-extrabold text-black uppercase mb-3">
-                FLEXIBLE APPROACH
+                {t("approach.card3_title")}
               </h3>
               <p className="text-gray-500 text-sm leading-relaxed">
-                We adapt to changing market conditions by evolving strategies, exploring new sectors, and maintaining flexibility to ensure resilience and ongoing success.
+                {t("approach.card3_desc")}
               </p>
             </div>
 
@@ -108,7 +112,8 @@ const ApproachAndCommitment = () => {
           
           {/* Left Side (Image) */}
           <div className="w-full lg:w-1/2 relative">
-            <div className="absolute top-0 left-0 w-2 h-full bg-[#A48639] z-10 -ml-4 lg:-ml-8 hidden md:block"></div>
+            {/* RTL এর জন্য লাইনটি বাম থেকে ডানে ফ্লিপ করা হয়েছে */}
+            <div className="absolute top-0 left-0 rtl:left-auto rtl:right-0 w-2 h-full bg-[#A48639] z-10 -ml-4 lg:-ml-8 rtl:-ml-0 rtl:-mr-4 rtl:lg:-mr-8 hidden md:block"></div>
             <Image 
               src="https://i.ibb.co.com/5gDCqzKX/a2943aa1ffa1c19b0ff1ad719a5ca78c642ba3fd.jpg"
               alt="Commitment Box" 
@@ -121,30 +126,31 @@ const ApproachAndCommitment = () => {
           {/* Right Side (Content) */}
           <div className="w-full lg:w-1/2 text-white">
             <span className="text-[#A48639] text-xs font-bold uppercase tracking-[0.15em] block mb-3">
-              OUR COMMITMENT
+              {t("commitment.overline")}
             </span>
             <h2 className="text-4xl md:text-5xl font-extrabold mb-6 tracking-tight leading-tight">
-              Focused on Long-Term Success
+              {t("commitment.title")}
             </h2>
             <p className="text-gray-400 text-sm md:text-base leading-relaxed mb-10">
-              We are committed to building strong, sustainable businesses that deliver long-term value. Through disciplined investment strategies, operational excellence, and continuous innovation, we support our companies in achieving consistent growth and performance. Our focus remains on creating a balanced portfolio that adapts to market changes while maintaining stability. By aligning our goals with economic development, we contribute to building a stronger and more resilient business environment.
+              {t("commitment.desc")}
             </p>
 
             {/* Bottom Sub-points */}
             <div className="flex flex-col md:flex-row gap-8 mt-8">
               {/* Point 1 */}
-              <div className="border-l-[3px] border-[#A48639] pl-4">
-                <h4 className="text-lg font-bold mb-2">Sustainable Value</h4>
+              {/* RTL এর জন্য বর্ডার এবং প্যাডিং ফ্লিপ করা হয়েছে */}
+              <div className="border-l-[3px] rtl:border-l-0 rtl:border-r-[3px] border-[#A48639] pl-4 rtl:pl-0 rtl:pr-4">
+                <h4 className="text-lg font-bold mb-2">{t("commitment.point1_title")}</h4>
                 <p className="text-gray-400 text-xs md:text-sm leading-relaxed">
-                  Focused on long-term growth and consistent value creation across sectors.
+                  {t("commitment.point1_desc")}
                 </p>
               </div>
               
               {/* Point 2 */}
-              <div className="border-l-[3px] border-[#A48639] pl-4">
-                <h4 className="text-lg font-bold mb-2">Strong Foundations</h4>
+              <div className="border-l-[3px] rtl:border-l-0 rtl:border-r-[3px] border-[#A48639] pl-4 rtl:pl-0 rtl:pr-4">
+                <h4 className="text-lg font-bold mb-2">{t("commitment.point2_title")}</h4>
                 <p className="text-gray-400 text-xs md:text-sm leading-relaxed">
-                  Building resilient businesses with structured operations and clear strategic direction.
+                  {t("commitment.point2_desc")}
                 </p>
               </div>
             </div>
