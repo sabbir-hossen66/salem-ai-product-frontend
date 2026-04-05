@@ -59,7 +59,7 @@ export default function Hero() {
                 {/* Right Image — always stays RIGHT, no dir */}
                 <div className="hidden lg:block lg:w-[45%] relative">
                     <Image
-                        src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?q=80&w=1632&auto=format&fit=crop"
+                        src="https://i.ibb.co.com/5WQzB42Q/landing-1.png"
                         alt="Business Meeting"
                         fill
                         className="object-cover object-left"
@@ -70,7 +70,7 @@ export default function Hero() {
                 {/* Mobile Image */}
                 <div className="block lg:hidden w-full h-[350px] sm:h-[450px] relative">
                     <Image
-                        src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?q=80&w=1632&auto=format&fit=crop"
+                        src="https://i.ibb.co.com/5WQzB42Q/landing-1.png"
                         alt="Business Meeting"
                         fill
                         className="object-cover object-center"

@@ -23,8 +23,12 @@ const figtree = Figtree({
 });
 
 export const metadata: Metadata = {
-  title: "Salem AI",
+  title: "Salem Group",
   description: "Strategic Investment Group",
+  icons: {
+    icon: "/favicon.ico",
+    apple: "/apple-icon.png",
+  },
 };
 
 export default function RootLayout({

@@ -76,12 +76,12 @@ export default function Navbar() {
             </button>
 
             {/* Contact Button */}
-            <button className="bg-linear-to-r from-[#745B00] to-[#FFC300] text-white px-6 py-3.5 flex items-center font-semibold hover:opacity-90 transition-opacity">
+            {/* <button className="bg-linear-to-r from-[#745B00] to-[#FFC300] text-white px-6 py-3.5 flex items-center font-semibold hover:opacity-90 transition-opacity">
               {t("nav.contact")}
               <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
               </svg>
-            </button>
+            </button> */}
           </div>
 
           {/* Mobile Right Side */}
@@ -129,12 +129,12 @@ export default function Navbar() {
               {t(link.key)}
             </Link>
           ))}
-          <button className="w-full mt-3 bg-linear-to-r from-[#745B00] to-[#FFC300] text-white px-6 py-3 flex items-center justify-center font-semibold hover:opacity-90 transition-opacity">
+          {/* <button className="w-full mt-3 bg-linear-to-r from-[#745B00] to-[#FFC300] text-white px-6 py-3 flex items-center justify-center font-semibold hover:opacity-90 transition-opacity">
             {t("nav.contact")}
             <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
             </svg>
-          </button>
+          </button> */}
         </div>
       )}
     </nav>
