@@ -174,5 +174,88 @@ export const translations: Record<string, Record<Language, string>> = {
   "whoare.alt_img1": { en: "Salem Al-Subaie Holding Group Logo on Wall", ar: "شعار مجموعة سالم آل سبيع القابضة على الحائط" },
   "whoare.alt_img2": { en: "Arabic Calligraphy on Wall", ar: "تخطيط عربي على الحائط" },
 
+  // About Overview Section
+  "about_overview.hero_overline": { en: "About Us", ar: "من نحن" },
+  "about_overview.hero_title_part1": { en: "Building Strong Foundations", ar: "بناء أسس قوية" },
+  "about_overview.hero_title_part2": { en: "for Sustainable Growth", ar: "من أجل نمو مستدام" },
+  "about_overview.hero_desc": { 
+    en: "A diversified Saudi holding group focused on acquiring, developing, and scaling businesses across strategic sectors to create long-term value and economic impact.", 
+    ar: "مجموعة قابضة سعودية متنوعة تركز على الاستحواذ على الأعمال وتطويرها وتوسيع نطاقها عبر القطاعات الاستراتيجية لخلق قيمة طويلة الأجل وتأثير اقتصادي." 
+  },
+  
+  "about_overview.watermark": { en: "GROWTH", ar: "نمو" },
+  
+  "about_overview.overview_overline": { en: "Overview", ar: "نظرة عامة" },
+  "about_overview.overview_title": { en: "A Diversified Investment Group", ar: "مجموعة استثمارية متنوعة" },
+  "about_overview.overview_desc": { 
+    en: "We are a Saudi-based investment holding group focused on acquiring, developing, and managing businesses across key strategic sectors. Our approach combines strong governance, operational excellence, and innovation to build sustainable growth. By enhancing company performance and unlocking new opportunities, we create long-term value for stakeholders. We aim to contribute to economic development by building a diversified portfolio that supports resilience, scalability, and continuous expansion in a dynamic market environment.", 
+    ar: "نحن مجموعة استثمارية قابضة مقرها المملكة العربية السعودية تركز على الاستحواذ وتطوير وإدارة الأعمال عبر القطاعات الاستراتيجية الرئيسية. يجمع نهجنا بين الحوكمة القوية والتميز التشغيلي والابتكار لبناء نمو مستدام. من خلال تعزيز أداء الشركة وفتح فرص جديدة، نخلق قيمة طويلة الأجل لأصحاب المصلحة. نهدف إلى المساهمة في التنمية الاقتصادية من خلال بناء محفظة متنوعة تدعم المرونة وقابلية التوسع والتوسع المستمر في بيئة سوق ديناميكية." 
+  },
+
+  "about_overview.feat1_title": { en: "Integrated Strategy", ar: "استراتيجية متكاملة" },
+  "about_overview.feat1_desc": { en: "Combining investment, operations, and innovation to build scalable businesses.", ar: "الجمع بين الاستثمار والعمليات والابتكار لبناء أعمال قابلة للتوسع." },
+  
+  "about_overview.feat2_title": { en: "Sustainable Growth", ar: "نمو مستدام" },
+  "about_overview.feat2_desc": { en: "Focusing on long-term value creation across all sectors consistently.", ar: "التركيز على خلق القيمة على المدى الطويل عبر جميع القطاعات باستمرار." },
+  // Direction & Values - Section 1 (Our Direction)
+  "direction.overline": { en: "Our Direction", ar: "توجهنا" },
+  "direction.title": { en: "Driven by Purpose and Vision", ar: "مدفوعون بالهدف والرؤية" },
+  
+  "direction.mission_title": { en: "Our Mission", ar: "مهمتنا" },
+  "direction.mission_desc": { en: "To develop and manage high-performing businesses that deliver value, innovation, and sustainable growth across key industries and evolving market opportunities.", ar: "تطوير وإدارة أعمال عالية الأداء تقدم قيمة وابتكاراً ونمواً مستداماً عبر الصناعات الرئيسية وفرص السوق المتطورة." },
+  
+  "direction.vision_title": { en: "Our Vision", ar: "رؤيتنا" },
+  "direction.vision_desc": { en: "To become a leading investment group recognized for building strong companies, driving diversification, and contributing to long-term economic growth.", ar: "أن نصبح مجموعة استثمارية رائدة ومعترف بها في بناء شركات قوية، ودفع عجلة التنوع، والمساهمة في النمو الاقتصادي طويل الأجل." },
+  
+  "direction.goals_title": { en: "Our Goals", ar: "أهدافنا" },
+  "direction.goals_desc": { en: "To expand into high-potential sectors, diversify our portfolio, and build strategic partnerships that drive growth, innovation, and long-term business resilience.", ar: "التوسع في القطاعات ذات الإمكانات العالية، وتنويع محفظتنا، وبناء شراكات استراتيجية تدفع عجلة النمو والابتكار ومرونة الأعمال على المدى الطويل." },
+
+  // Direction & Values - Section 2 (Our Values)
+  "values.overline": { en: "Our Values", ar: "قيمنا" },
+  "values.title": { en: "The Principles That Guide Us", ar: "المبادئ التي توجهنا" },
+  
+  "values.val1_title": { en: "Integrity", ar: "النزاهة" },
+  "values.val1_desc": { en: "We operate with transparency, accountability, and strong ethical standards across all business activities, ensuring trust and long-term relationships.", ar: "نعمل بشفافية ومساءلة ومعايير أخلاقية قوية في جميع الأنشطة التجارية، مما يضمن الثقة والعلاقات طويلة الأجل." },
+  "values.val1_tag": { en: "Built on trust and responsibility", ar: "مبنية على الثقة والمسؤولية" },
+  
+  "values.val2_title": { en: "Excellence", ar: "التميز" },
+  "values.val2_desc": { en: "We strive for high performance, quality, and continuous improvement in every aspect of our operations and decision-making processes across all sectors.", ar: "نسعى جاهدين لتحقيق أداء عالٍ وجودة وتحسين مستمر في كل جانب من جوانب عملياتنا وعمليات صنع القرار عبر جميع القطاعات." },
+  "values.val2_tag": { en: "Committed to high standards", ar: "ملتزمون بمعايير عالية" },
+  
+  "values.val3_title": { en: "Innovation", ar: "الابتكار" },
+  "values.val3_desc": { en: "We embrace new ideas, technologies, and strategies to enhance efficiency, unlock opportunities, and remain competitive in evolving business environments.", ar: "نتبنى أفكاراً وتقنيات واستراتيجيات جديدة لتعزيز الكفاءة وفتح الفرص والبقاء في دائرة المنافسة في بيئات الأعمال المتطورة." },
+  "values.val3_tag": { en: "Driven by forward thinking", ar: "مدفوعون بالتفكير المستقبلي" },
+  
+  "values.val4_title": { en: "Partnerships", ar: "الشراكات" },
+  "values.val4_desc": { en: "We build strong collaborations that create mutual value, expand capabilities, and support sustainable growth across our network of companies.", ar: "نبني تعاونات قوية تخلق قيمة متبادلة وتوسع القدرات وتدعم النمو المستدام عبر شبكتنا من الشركات." },
+  "values.val4_tag": { en: "Stronger together", ar: "أقوى معاً" },
+  
+  "values.val5_title": { en: "Teamwork", ar: "العمل الجماعي" },
+  "values.val5_desc": { en: "We foster collaboration, shared responsibility, and collective success by empowering our teams and encouraging open communication.", ar: "نعزز التعاون والمسؤولية المشتركة والنجاح الجماعي من خلال تمكين فرقنا وتشجيع التواصل المفتوح." },
+  "values.val5_tag": { en: "Empowering our people", ar: "تمكين أفرادنا" },
+  
+  "values.val6_title": { en: "Sustainability", ar: "الاستدامة" },
+  "values.val6_desc": { en: "We focus on long-term financial stability, responsible growth, and creating lasting value that supports both business success and economic development.", ar: "نركز على الاستقرار المالي طويل الأجل، والنمو المسؤول، وخلق قيمة دائمة تدعم نجاح الأعمال والتنمية الاقتصادية." },
+  "values.val6_tag": { en: "Growth with responsibility", ar: "النمو بمسؤولية" },
+
+  // Impact & Partnership Section
+  "impact.overline": { en: "Our Impact", ar: "تأثيرنا" },
+  "impact.title_part1": { en: "Delivering Measurable", ar: "تحقيق نتائج قابلة للقياس" },
+  "impact.title_part2": { en: "Results that Shine", ar: "ومبهرة" },
+  "impact.desc": { 
+    en: "Our performance is driven by consistent growth, operational strength, and a commitment to delivering measurable value across our investment portfolio.", 
+    ar: "يُدفع أداؤنا بنمو مستمر وقوة تشغيلية والتزام بتقديم قيمة ملموسة عبر محفظتنا الاستثمارية." 
+  },
+  "impact.stat1_label": { en: "Active Sectors", ar: "قطاعات نشطة" },
+  "impact.stat2_label": { en: "Companies Managed", ar: "شركات مدارة" },
+  
+  "partnership.title_part1": { en: "Build Strategic", ar: "بناء شراكات" },
+  "partnership.title_part2": { en: "Partnerships", ar: "استراتيجية" },
+  "partnership.desc": { 
+    en: "Collaborate with us to explore new opportunities, expand capabilities, and create long-term value through strong and mutually beneficial partnerships.", 
+    ar: "تعاون معنا لاستكشاف فرص جديدة، وتوسيع القدرات، وخلق قيمة طويلة الأجل من خلال شراكات قوية ومتبادلة المنفعة." 
+  },
+  "partnership.btn_explore": { en: "Explore Sectors", ar: "استكشف القطاعات" },
+  "partnership.btn_contact": { en: "Contact Our Team", ar: "تواصل مع فريقنا" },
 
 };

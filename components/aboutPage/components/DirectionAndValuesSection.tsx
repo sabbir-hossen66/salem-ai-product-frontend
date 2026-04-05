@@ -1,8 +1,11 @@
-"use client"
+"use client";
 import Image from 'next/image';
 import React from 'react';
+import { useLang } from '@/context/LanguageContext'; // সঠিক পাথ দিন
 
 export default function DirectionAndValuesSection() {
+    const { t } = useLang();
+
     return (
         <div className="w-full font-sans">
             
@@ -25,10 +28,10 @@ export default function DirectionAndValuesSection() {
                     {/* Header */}
                     <div className="text-center mb-16">
                         <span className="text-[#C5A028] text-xs font-bold tracking-[0.2em] uppercase">
-                            Our Direction
+                            {t("direction.overline")}
                         </span>
                         <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white mt-4 tracking-tight">
-                            Driven by Purpose and Vision
+                            {t("direction.title")}
                         </h2>
                     </div>
 
@@ -42,9 +45,11 @@ export default function DirectionAndValuesSection() {
                                 <svg className="w-10 h-10 text-[#C5A028] mb-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
                                 </svg>
-                                <h3 className="text-xl font-extrabold text-gray-900 mb-4 uppercase tracking-wide">Our Mission</h3>
+                                <h3 className="text-xl font-extrabold text-gray-900 mb-4 uppercase tracking-wide">
+                                    {t("direction.mission_title")}
+                                </h3>
                                 <p className="text-gray-600 text-sm leading-relaxed">
-                                    To develop and manage high-performing businesses that deliver value, innovation, and sustainable growth across key industries and evolving market opportunities.
+                                    {t("direction.mission_desc")}
                                 </p>
                             </div>
                             <div className="w-12 h-1.5 bg-[#C5A028] mt-10"></div>
@@ -58,9 +63,11 @@ export default function DirectionAndValuesSection() {
                                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
                                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
                                 </svg>
-                                <h3 className="text-xl font-extrabold text-white mb-4 uppercase tracking-wide">Our Vision</h3>
+                                <h3 className="text-xl font-extrabold text-white mb-4 uppercase tracking-wide">
+                                    {t("direction.vision_title")}
+                                </h3>
                                 <p className="text-gray-400 text-sm leading-relaxed">
-                                    To become a leading investment group recognized for building strong companies, driving diversification, and contributing to long-term economic growth.
+                                    {t("direction.vision_desc")}
                                 </p>
                             </div>
                             <div className="w-12 h-1.5 bg-[#C5A028] mt-10"></div>
@@ -73,9 +80,11 @@ export default function DirectionAndValuesSection() {
                                 <svg className="w-10 h-10 text-[#C5A028] mb-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 21v-4m0 0V5a2 2 0 012-2h6.5l1 1H21l-3 6 3 6h-8.5l-1-1H5a2 2 0 00-2 2zm9-13.5V9" />
                                 </svg>
-                                <h3 className="text-xl font-extrabold text-gray-900 mb-4 uppercase tracking-wide">Our Goals</h3>
+                                <h3 className="text-xl font-extrabold text-gray-900 mb-4 uppercase tracking-wide">
+                                    {t("direction.goals_title")}
+                                </h3>
                                 <p className="text-gray-600 text-sm leading-relaxed">
-                                    To expand into high-potential sectors, diversify our portfolio, and build strategic partnerships that drive growth, innovation, and long-term business resilience.
+                                    {t("direction.goals_desc")}
                                 </p>
                             </div>
                             <div className="w-12 h-1.5 bg-[#C5A028] mt-10"></div>
@@ -94,10 +103,10 @@ export default function DirectionAndValuesSection() {
                     {/* Header */}
                     <div className="text-center mb-16">
                         <span className="text-[#C5A028] text-xs font-bold tracking-[0.2em] uppercase">
-                            Our Values
+                            {t("values.overline")}
                         </span>
                         <h2 className="text-3xl sm:text-4xl font-extrabold text-gray-900 mt-4 tracking-tight">
-                            The Principles That Guide Us
+                            {t("values.title")}
                         </h2>
                     </div>
 
@@ -109,11 +118,13 @@ export default function DirectionAndValuesSection() {
                             <div className="text-[#C5A028] mb-6">
                                 <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" /></svg>
                             </div>
-                            <h3 className="text-lg font-bold text-gray-900 mb-3">Integrity</h3>
+                            <h3 className="text-lg font-bold text-gray-900 mb-3">{t("values.val1_title")}</h3>
                             <p className="text-gray-500 text-sm leading-relaxed mb-8 flex-grow">
-                                We operate with transparency, accountability, and strong ethical standards across all business activities, ensuring trust and long-term relationships.
+                                {t("values.val1_desc")}
                             </p>
-                            <span className="text-[#C5A028] text-[10px] font-bold tracking-[0.15em] uppercase mt-auto">Built on trust and responsibility</span>
+                            <span className="text-[#C5A028] text-[10px] font-bold tracking-[0.15em] uppercase mt-auto">
+                                {t("values.val1_tag")}
+                            </span>
                         </div>
 
                         {/* Value 2 */}
@@ -121,11 +132,13 @@ export default function DirectionAndValuesSection() {
                             <div className="text-[#C5A028] mb-6">
                                 <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z" /></svg>
                             </div>
-                            <h3 className="text-lg font-bold text-gray-900 mb-3">Excellence</h3>
+                            <h3 className="text-lg font-bold text-gray-900 mb-3">{t("values.val2_title")}</h3>
                             <p className="text-gray-500 text-sm leading-relaxed mb-8 flex-grow">
-                                We strive for high performance, quality, and continuous improvement in every aspect of our operations and decision-making processes across all sectors.
+                                {t("values.val2_desc")}
                             </p>
-                            <span className="text-[#C5A028] text-[10px] font-bold tracking-[0.15em] uppercase mt-auto">Committed to high standards</span>
+                            <span className="text-[#C5A028] text-[10px] font-bold tracking-[0.15em] uppercase mt-auto">
+                                {t("values.val2_tag")}
+                            </span>
                         </div>
 
                         {/* Value 3 */}
@@ -133,11 +146,13 @@ export default function DirectionAndValuesSection() {
                             <div className="text-[#C5A028] mb-6">
                                 <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" /></svg>
                             </div>
-                            <h3 className="text-lg font-bold text-gray-900 mb-3">Innovation</h3>
+                            <h3 className="text-lg font-bold text-gray-900 mb-3">{t("values.val3_title")}</h3>
                             <p className="text-gray-500 text-sm leading-relaxed mb-8 flex-grow">
-                                We embrace new ideas, technologies, and strategies to enhance efficiency, unlock opportunities, and remain competitive in evolving business environments.
+                                {t("values.val3_desc")}
                             </p>
-                            <span className="text-[#C5A028] text-[10px] font-bold tracking-[0.15em] uppercase mt-auto">Driven by forward thinking</span>
+                            <span className="text-[#C5A028] text-[10px] font-bold tracking-[0.15em] uppercase mt-auto">
+                                {t("values.val3_tag")}
+                            </span>
                         </div>
 
                         {/* Value 4 */}
@@ -145,11 +160,13 @@ export default function DirectionAndValuesSection() {
                             <div className="text-[#C5A028] mb-6">
                                 <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" /></svg>
                             </div>
-                            <h3 className="text-lg font-bold text-gray-900 mb-3">Partnerships</h3>
+                            <h3 className="text-lg font-bold text-gray-900 mb-3">{t("values.val4_title")}</h3>
                             <p className="text-gray-500 text-sm leading-relaxed mb-8 flex-grow">
-                                We build strong collaborations that create mutual value, expand capabilities, and support sustainable growth across our network of companies.
+                                {t("values.val4_desc")}
                             </p>
-                            <span className="text-[#C5A028] text-[10px] font-bold tracking-[0.15em] uppercase mt-auto">Stronger together</span>
+                            <span className="text-[#C5A028] text-[10px] font-bold tracking-[0.15em] uppercase mt-auto">
+                                {t("values.val4_tag")}
+                            </span>
                         </div>
 
                         {/* Value 5 (Highlighted with border) */}
@@ -157,11 +174,13 @@ export default function DirectionAndValuesSection() {
                             <div className="text-[#C5A028] mb-6">
                                 <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z" /></svg>
                             </div>
-                            <h3 className="text-lg font-bold text-gray-900 mb-3">Teamwork</h3>
+                            <h3 className="text-lg font-bold text-gray-900 mb-3">{t("values.val5_title")}</h3>
                             <p className="text-gray-500 text-sm leading-relaxed mb-8 flex-grow">
-                                We foster collaboration, shared responsibility, and collective success by empowering our teams and encouraging open communication.
+                                {t("values.val5_desc")}
                             </p>
-                            <span className="text-[#C5A028] text-[10px] font-bold tracking-[0.15em] uppercase mt-auto">Empowering our people</span>
+                            <span className="text-[#C5A028] text-[10px] font-bold tracking-[0.15em] uppercase mt-auto">
+                                {t("values.val5_tag")}
+                            </span>
                         </div>
 
                         {/* Value 6 */}
@@ -169,11 +188,13 @@ export default function DirectionAndValuesSection() {
                             <div className="text-[#C5A028] mb-6">
                                 <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9" /></svg>
                             </div>
-                            <h3 className="text-lg font-bold text-gray-900 mb-3">Sustainability</h3>
+                            <h3 className="text-lg font-bold text-gray-900 mb-3">{t("values.val6_title")}</h3>
                             <p className="text-gray-500 text-sm leading-relaxed mb-8 flex-grow">
-                                We focus on long-term financial stability, responsible growth, and creating lasting value that supports both business success and economic development.
+                                {t("values.val6_desc")}
                             </p>
-                            <span className="text-[#C5A028] text-[10px] font-bold tracking-[0.15em] uppercase mt-auto">Growth with responsibility</span>
+                            <span className="text-[#C5A028] text-[10px] font-bold tracking-[0.15em] uppercase mt-auto">
+                                {t("values.val6_tag")}
+                            </span>
                         </div>
 
                     </div>
