@@ -1,7 +1,11 @@
+"use client";
 import Image from 'next/image';
 import React from 'react';
+import { useLang } from '@/context/LanguageContext'; // সঠিক পাথ দিন
 
 const HeroWithCards = () => {
+  const { t } = useLang();
+
   return (
     <div className="w-full font-sans">
       
@@ -22,20 +26,21 @@ const HeroWithCards = () => {
         </div>
 
         <div className="relative z-10 max-w-7xl mx-auto">
-          <div className="max-w-3xl">
+          {/* RTL এর জন্য টেক্সট অ্যালাইনমেন্ট ঠিক করা হয়েছে */}
+          <div className="max-w-3xl text-left rtl:text-right">
             {/* Golden overline text */}
             <span className="text-[#C5A028] text-xs md:text-sm font-bold uppercase tracking-[0.15em] mb-4 block">
-              STRATEGIC DIRECTION
+              {t("hero_cards.overline")}
             </span>
 
             {/* Main heading with exact line break */}
             <h1 className="text-4xl md:text-5xl lg:text-[56px] font-extrabold text-white leading-[1.1] mb-6 tracking-tight">
-              Driving Sustainable Growth Through <br className="hidden md:block" /> Structured Investment
+              {t("hero_cards.title_part1")} <br className="hidden md:block" /> {t("hero_cards.title_part2")}
             </h1>
 
             {/* Paragraph matching exact text length and color */}
             <p className="text-gray-300 text-base md:text-lg leading-relaxed mb-10 max-w-2xl">
-              We adopt a disciplined investment approach focused on identifying high-potential opportunities, strengthening operational performance, and scaling businesses across strategic sectors.
+              {t("hero_cards.desc")}
             </p>
 
             {/* Small image/text block */}
@@ -52,12 +57,12 @@ const HeroWithCards = () => {
               </div>
               
               {/* Flag Text */}
-              <div className="flex flex-col justify-center">
+              <div className="flex flex-col justify-center text-left rtl:text-right">
                 <span className="text-white text-[10px] md:text-xs font-bold uppercase tracking-wider mb-1.5">
-                  INTEGRATED INVESTMENT MODEL
+                  {t("hero_cards.flag_overline")}
                 </span>
                 <p className="text-gray-400 text-[10px] md:text-xs leading-relaxed max-w-xs">
-                  Combining acquisition, development, and operational excellence to maximize long-term business value.
+                  {t("hero_cards.flag_desc")}
                 </p>
               </div>
             </div>
@@ -72,28 +77,30 @@ const HeroWithCards = () => {
         <div className="max-w-3xl mx-auto">
           {/* Large black heading */}
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-extrabold text-black mb-6 tracking-tight">
-            Lets Build the Future Together
+            {t("hero_cards.cta_title")}
           </h2>
           
           {/* Black description paragraph */}
           <p className="text-gray-500 text-sm md:text-base leading-relaxed mb-10">
-            Reach out to our team to learn more about our services, partnerships, and how we can work together to achieve shared success.
+            {t("hero_cards.cta_desc")}
           </p>
           
           {/* Side-by-side buttons */}
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
               {/* Solid Button */}
               <button className="flex items-center gap-2 px-8 py-3.5 bg-[#9F801C] text-white rounded-sm text-sm font-semibold transition duration-300 hover:bg-[#8B6E16] w-full sm:w-auto justify-center">
-                  Learn More
-                  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  {t("hero_cards.btn_learn")}
+                  {/* RTL এর জন্য আইকন ঘোরানো হয়েছে */}
+                  <svg className="w-4 h-4 rtl:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
                   </svg>
               </button>
               
               {/* Outline Button */}
               <button className="flex items-center gap-2 px-8 py-3.5 border border-[#9F801C] text-[#9F801C] rounded-sm text-sm font-semibold transition duration-300 hover:bg-[#9F801C] hover:text-white w-full sm:w-auto justify-center group">
-                  Contact Our Team
-                  <svg className="w-4 h-4 text-[#9F801C] group-hover:text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  {t("hero_cards.btn_contact")}
+                  {/* RTL এর জন্য আইকন ঘোরানো হয়েছে */}
+                  <svg className="w-4 h-4 text-[#9F801C] group-hover:text-white rtl:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
                   </svg>
               </button>

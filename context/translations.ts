@@ -357,4 +357,118 @@ export const translations: Record<string, Record<Language, string>> = {
     ar: "نحن نجمع بين الخبرة والاستراتيجية والابتكار لتقديم قيمة متسقة، وأداء قوي، ونمو أعمال طويل الأجل عبر القطاعات." 
   },
 
+  // Explore Section
+  "explore.title": { en: "Explore New Opportunities", ar: "استكشاف فرص جديدة" },
+  "explore.desc": { 
+    en: "Partner with us to explore opportunities across our sectors and discover how our expertise, resources, and strategic approach can support your business growth and long-term success.", 
+    ar: "كن شريكاً معنا لاستكشاف الفرص في مختلف قطاعاتنا واكتشف كيف يمكن لخبراتنا ومواردنا ونهجنا الاستراتيجي دعم نمو أعمالك ونجاحك على المدى الطويل." 
+  },
+  "explore.btn_contact": { en: "Contact Us", ar: "اتصل بنا" },
+
+  // Value Section
+//   "value.overline": { en: "Our Approach", ar: "نهجنا" },
+//   "value.title": { en: "Building Value Across Every Sector", ar: "بناء القيمة في كل قطاع" },
+  "value.desc": { 
+    en: "Our approach focuses on identifying opportunities within each sector and enhancing their performance through structured development, operational improvements, and strategic direction. We work closely with our companies to strengthen their capabilities, optimize resources, and unlock new growth potential. By combining industry expertise with innovation, we ensure that each sector contributes effectively to our overall portfolio, creating a balanced and sustainable investment ecosystem that supports long-term expansion.", 
+    ar: "يركز نهجنا على تحديد الفرص داخل كل قطاع وتعزيز أدائه من خلال التطوير المنظم والتحسينات التشغيلية والتوجيه الاستراتيجي. نعمل عن كثب مع شركاتنا لتعزيز قدراتها، وتحسين الموارد، وإطلاق العنان لإمكانات نمو جديدة. من خلال الجمع بين الخبرة الصناعية والابتكار، نضمن مساهمة كل قطاع بفعالية في محفظتنا الشاملة، مما يخلق بيئة استثمارية متوازنة ومستدامة تدعم التوسع طويل الأجل." 
+  },
+  "value.item1_title": { en: "Operational Excellence", ar: "التميز التشغيلي" },
+  "value.item1_desc": { en: "We improve processes, systems, and performance to ensure efficiency, stability, and consistent growth across all sectors.", ar: "نعمل على تحسين العمليات والأنظمة والأداء لضمان الكفاءة والاستقرار والنمو المستمر عبر جميع القطاعات." },
+  
+  "value.item2_title": { en: "Strategic Expansion", ar: "التوسع الاستراتيجي" },
+  "value.item2_desc": { en: "We identify new opportunities within sectors and expand into areas that enhance value, diversify investments, and strengthen long-term growth.", ar: "نحدد فرصاً جديدة داخل القطاعات ونتوسع في المجالات التي تعزز القيمة وتنويع الاستثمارات وتقوي النمو طويل الأجل." },
+// Hero Section
+  "hero_cards.overline": { en: "STRATEGIC DIRECTION", ar: "التوجيه الاستراتيجي" },
+  "hero_cards.title_part1": { en: "Driving Sustainable Growth Through", ar: "دفع عجلة النمو المستدام من خلال" },
+  "hero_cards.title_part2": { en: "Structured Investment", ar: "استثمار منظم" },
+  "hero_cards.desc": { 
+    en: "We adopt a disciplined investment approach focused on identifying high-potential opportunities, strengthening operational performance, and scaling businesses across strategic sectors.", 
+    ar: "نعتمد نهجاً استثمارياً منضبطاً يركز على تحديد الفرص ذات الإمكانات العالية، وتعزيز الأداء التشغيلي، وتوسيع نطاق الأعمال عبر القطاعات الاستراتيجية." 
+  },
+  "hero_cards.flag_overline": { en: "INTEGRATED INVESTMENT MODEL", ar: "نموذج استثمار متكامل" },
+  "hero_cards.flag_desc": { 
+    en: "Combining acquisition, development, and operational excellence to maximize long-term business value.", 
+    ar: "الجمع بين الاستحواذ والتطوير والتميز التشغيلي لتعظيم قيمة الأعمال على المدى الطويل." 
+  },
+
+  // CTA / Bottom Section
+  "hero_cards.cta_title": { en: "Lets Build the Future Together", ar: "دعونا نبني المستقبل معاً" },
+  "hero_cards.cta_desc": { 
+    en: "Reach out to our team to learn more about our services, partnerships, and how we can work together to achieve shared success.", 
+    ar: "تواصل مع فريقنا لمعرفة المزيد عن خدماتنا وشراكاتنا وكيف يمكننا العمل معاً لتحقيق نجاح مشترك." 
+  },
+  "hero_cards.btn_learn": { en: "Learn More", ar: "اعرف المزيد" },
+  "hero_cards.btn_contact": { en: "Contact Our Team", ar: "تواصل مع فريقنا" },
+
+  // Sectors & Industries - Top Section
+  "sectors.top_overline": { en: "Our Sectors", ar: "قطاعاتنا" },
+  "sectors.top_title_part1": { en: "Driving Growth Across Key", ar: "دفع عجلة النمو عبر" },
+  "sectors.top_title_part2": { en: "Industries", ar: "الصناعات الرئيسية" },
+  "sectors.top_desc": { 
+    en: "We operate across diverse sectors that support economic development, strengthen business capabilities, and create long-term value through strategic investments and operational excellence.", 
+    ar: "نعمل عبر قطاعات متنوعة تدعم التنمية الاقتصادية، وتعزز قدرات الأعمال، وتخلق قيمة طويلة الأجل من خلال الاستثمارات الاستراتيجية والتميز التشغيلي." 
+  },
+
+  // Sectors & Industries - Bottom Section
+  "sectors.watermark": { en: "GROWTH", ar: "نمو" },
+  "sectors.bot_overline": { en: "Core Industries", ar: "الصناعات الأساسية" },
+  "sectors.bot_title": { en: "Where We Operate", ar: "أين نعمل" },
+  "sectors.bot_desc": { 
+    en: "Our diversified portfolio spans multiple sectors, enabling resilience, scalability, and consistent growth across dynamic and high-impact industries.", 
+    ar: "تمتد محفظتنا المتنوعة عبر قطاعات متعددة، مما يتيح المرونة وقابلية التوسع والنمو المستمر في صناعات ديناميكية وعالية التأثير." 
+  },
+
+  // Cards
+  "sectors.card1_title": { en: "Digital Marketing", ar: "التسويق الرقمي" },
+  "sectors.card1_desc": { en: "We manage campaigns, branding, and digital strategies that enhance visibility, engagement, and measurable growth for businesses across multiple digital platforms.", ar: "ندير الحملات والعلامات التجارية والاستراتيجيات الرقمية التي تعزز الرؤية والتفاعل والنمو الملموس للشركات عبر منصات رقمية متعددة." },
+  "sectors.card1_footer": { en: "Building Strong Digital Presence", ar: "بناء حضور رقمي قوي" },
+
+  "sectors.card2_title": { en: "Hajj & Umrah", ar: "الحج والعمرة" },
+  "sectors.card2_desc": { en: "We provide integrated services including accommodation, transport, and logistics, ensuring a seamless and high-quality experience for pilgrims throughout their journey.", ar: "نقدم خدمات متكاملة تشمل الإقامة والنقل والخدمات اللوجستية، لضمان تجربة سلسة وعالية الجودة للحجاج والمعتمرين طوال رحلتهم." },
+  "sectors.card2_footer": { en: "Serving Pilgrims With Excellence", ar: "خدمة ضيوف الرحمن بتميز" },
+
+  "sectors.card3_title": { en: "Contracting", ar: "المقاولات" },
+  "sectors.card3_desc": { en: "We deliver construction and infrastructure projects with a focus on quality, safety, and efficiency, ensuring durable and modern developments across sectors.", ar: "ننفذ مشاريع البناء والبنية التحتية مع التركيز على الجودة والسلامة والكفاءة، لضمان تطورات دائمة وحديثة عبر القطاعات." },
+  "sectors.card3_footer": { en: "Building Reliable Infrastructure", ar: "بناء بنية تحتية موثوقة" },
+
+  "sectors.card4_title": { en: "E-Commerce", ar: "التجارة الإلكترونية" },
+  "sectors.card4_desc": { en: "We operate digital platforms and online stores that provide seamless shopping experiences, supported by advanced systems and innovative marketing strategies.", ar: "ندير منصات رقمية ومتاجر إلكترونية توفر تجارب تسوق سلسة، مدعومة بأنظمة متقدمة واستراتيجيات تسويق مبتكرة." },
+  "sectors.card4_footer": { en: "Powering Online Business", ar: "دعم الأعمال عبر الإنترنت" },
+
+  "sectors.card5_title": { en: "Technology", ar: "التكنولوجيا" },
+  "sectors.card5_desc": { en: "We develop digital solutions, platforms, and systems that enhance efficiency, support innovation, and drive transformation across businesses and industries.", ar: "نطور حلولاً ومنصات وأنظمة رقمية تعزز الكفاءة وتدعم الابتكار وتدفع عجلة التحول عبر الشركات والصناعات." },
+  "sectors.card5_footer": { en: "Enabling Digital Transformation", ar: "تمكين التحول الرقمي" },
+
+  // Strategic Investment Group - Hero Section
+  "hero_strategic.overline": { en: "STRATEGIC INVESTMENT GROUP", ar: "مجموعة استثمارية استراتيجية" },
+  "hero_strategic.title_part1": { en: "Building Sustainable", ar: "بناء نمو أعمال" },
+  "hero_strategic.title_part2": { en: "Business Growth", ar: "مستدام" },
+  "hero_strategic.desc": { 
+    en: "A diversified Saudi holding group focused on acquiring, developing, and scaling businesses across strategic sectors to create long-term value and economic impact.", 
+    ar: "مجموعة قابضة سعودية متنوعة تركز على الاستحواذ على الأعمال وتطويرها وتوسيع نطاقها عبر القطاعات الاستراتيجية لخلق قيمة وتأثير اقتصادي طويل الأجل." 
+  },
+  "hero_strategic.btn_explore": { en: "Explore Our Business", ar: "استكشف أعمالنا" },
+  "hero_strategic.btn_vision": { en: "Our Vision", ar: "رؤيتنا" },
+
+  // Cards below Hero
+  "hero_strategic.card1_title": { en: "Growth Focus", ar: "التركيز على النمو" },
+  "hero_strategic.card1_desc": { 
+    en: "We identify high-potential opportunities and scale them through structured strategies and operational improvements", 
+    ar: "نحدد الفرص ذات الإمكانات العالية ونوسع نطاقها من خلال استراتيجيات منظمة وتحسينات تشغيلية" 
+  },
+
+  "hero_strategic.card2_title": { en: "Diverse Sectors", ar: "قطاعات متنوعة" },
+  "hero_strategic.card2_desc": { 
+    en: "Operating across multiple industries, we build resilience through diversification, ensuring stability and adaptability", 
+    ar: "نعمل عبر صناعات متعددة، ونبني المرونة من خلال التنويع، مما يضمن الاستقرار والقدرة على التكيف" 
+  },
+
+  "hero_strategic.card3_title": { en: "Strategic Vision", ar: "رؤية استراتيجية" },
+  "hero_strategic.card3_desc": { 
+    en: "Guided by clear direction and innovation, we align our investments with future opportunities to maximize value", 
+    ar: "مسترشدين بتوجه واضح وابتكار، نوائم استثماراتنا مع الفرص المستقبلية لتعظيم القيمة" 
+  },
+
+  
+
 };

@@ -1,8 +1,11 @@
 "use client"
 import Image from 'next/image';
 import React from 'react';
+import { useLang } from '@/context/LanguageContext'; // সঠিক পাথ দিন
 
 export default function ExploreAndValueSection() {
+    const { t } = useLang();
+
     return (
         <div className="w-full font-sans">
             
@@ -26,20 +29,21 @@ export default function ExploreAndValueSection() {
                     <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-8">
                         
                         {/* Left Side: Text */}
-                        <div className="max-w-3xl">
+                        <div className="max-w-3xl text-left rtl:text-right">
                             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white mb-4 tracking-tight">
-                                Explore New Opportunities
+                                {t("explore.title")}
                             </h2>
                             <p className="text-gray-300 text-sm sm:text-base leading-relaxed">
-                                Partner with us to explore opportunities across our sectors and discover how our expertise, resources, and strategic approach can support your business growth and long-term success.
+                                {t("explore.desc")}
                             </p>
                         </div>
 
                         {/* Right Side: Button */}
                         <div className="shrink-0">
                             <button className="px-8 py-3.5 bg-linear-to-r from-[#745B00] to-[#FFC300] hover:bg-[#A88822] transition-colors duration-300 text-white text-sm font-semibold flex items-center justify-center gap-2 rounded-sm shadow-lg">
-                                Contact Us
-                                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                {t("explore.btn_contact")}
+                                {/* RTL এর জন্য অ্যারো ঘোরানো হয়েছে */}
+                                <svg className="w-4 h-4 rtl:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M14 5l7 7m0 0l-7 7m7-7H3" />
                                 </svg>
                             </button>
@@ -56,20 +60,20 @@ export default function ExploreAndValueSection() {
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
                         
                         {/* Left Column: Content */}
-                        <div>
+                        <div className="text-left rtl:text-right">
                             {/* Overline */}
                             <span className="text-[#C5A028] text-xs font-bold tracking-[0.2em] uppercase block mb-4">
-                                Our Approach
+                                {t("value.overline")}
                             </span>
                             
                             {/* Heading */}
                             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-gray-900 mb-6 leading-tight tracking-tight">
-                                Building Value Across Every Sector
+                                {t("value.title")}
                             </h2>
 
                             {/* Paragraph */}
                             <p className="text-gray-500 text-sm sm:text-base leading-relaxed mb-10 text-justify">
-                                Our approach focuses on identifying opportunities within each sector and enhancing their performance through structured development, operational improvements, and strategic direction. We work closely with our companies to strengthen their capabilities, optimize resources, and unlock new growth potential. By combining industry expertise with innovation, we ensure that each sector contributes effectively to our overall portfolio, creating a balanced and sustainable investment ecosystem that supports long-term expansion.
+                                {t("value.desc")}
                             </p>
 
                             {/* Sub-items with Divider */}
@@ -78,18 +82,24 @@ export default function ExploreAndValueSection() {
                                 <div className="hidden md:block absolute top-0 bottom-0 left-1/2 w-px bg-gray-300 transform -translate-x-1/2"></div>
 
                                 {/* Item 1 */}
-                                <div className="pr-0 md:pr-6">
-                                    <h4 className="text-[#C5A028] text-base lg:text-lg font-bold mb-2">Operational Excellence</h4>
+                                {/* RTL এর জন্য প্যাডিং ফ্লিপ করা হয়েছে */}
+                                <div className="pr-0 md:pr-6 rtl:md:pr-0 rtl:md:pl-6">
+                                    <h4 className="text-[#C5A028] text-base lg:text-lg font-bold mb-2">
+                                        {t("value.item1_title")}
+                                    </h4>
                                     <p className="text-gray-500 text-xs sm:text-sm leading-relaxed">
-                                        We improve processes, systems, and performance to ensure efficiency, stability, and consistent growth across all sectors.
+                                        {t("value.item1_desc")}
                                     </p>
                                 </div>
 
                                 {/* Item 2 */}
-                                <div className="pl-0 md:pl-6 border-t border-gray-200 pt-6 md:border-t-0 md:pt-0">
-                                    <h4 className="text-[#C5A028] text-base lg:text-lg font-bold mb-2">Strategic Expansion</h4>
+                                {/* RTL এর জন্য প্যাডিং ফ্লিপ করা হয়েছে */}
+                                <div className="pl-0 md:pl-6 rtl:md:pl-0 rtl:md:pr-6 border-t border-gray-200 pt-6 md:border-t-0 md:pt-0">
+                                    <h4 className="text-[#C5A028] text-base lg:text-lg font-bold mb-2">
+                                        {t("value.item2_title")}
+                                    </h4>
                                     <p className="text-gray-500 text-xs sm:text-sm leading-relaxed">
-                                        We identify new opportunities within sectors and expand into areas that enhance value, diversify investments, and strengthen long-term growth.
+                                        {t("value.item2_desc")}
                                     </p>
                                 </div>
                             </div>
