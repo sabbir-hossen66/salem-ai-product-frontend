@@ -1,16 +1,16 @@
 "use client";
 import React from 'react';
-import { useLang } from '@/context/LanguageContext'; // সঠিক পাথ দিন
+import { useLang } from '@/context/LanguageContext';
 
 const WhyChooseUs = () => {
-  const { t } = useLang();
+  const { t, lang } = useLang(); // lang সংগ্রহ করা হলো
+  const isRtl = lang === 'ar'; // অ্যারাবিক কি না চেক করা হলো
 
   const strengthsData = [
     {
       title: t("strengths.card1_title"),
       description: t("strengths.card1_desc"),
       footer: t("strengths.card_footer"),
-      // Custom SVG matching the first icon
       icon: (
         <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
           <path d="M4 4H10V20H4V4Z" />
@@ -23,7 +23,6 @@ const WhyChooseUs = () => {
       title: t("strengths.card2_title"),
       description: t("strengths.card2_desc"),
       footer: t("strengths.card_footer"),
-      // Custom SVG matching the second icon (Medal/Ribbon)
       icon: (
         <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" xmlns="http://www.w3.org/2000/svg">
           <circle cx="12" cy="8" r="6" />
@@ -37,7 +36,6 @@ const WhyChooseUs = () => {
       title: t("strengths.card3_title"),
       description: t("strengths.card3_desc"),
       footer: t("strengths.card_footer"),
-      // Custom SVG matching the third icon (Lightbulb)
       icon: (
         <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" xmlns="http://www.w3.org/2000/svg">
           <path d="M9 18h6" />
@@ -58,7 +56,6 @@ const WhyChooseUs = () => {
       title: t("strengths.card4_title"),
       description: t("strengths.card4_desc"),
       footer: t("strengths.card_footer"),
-      // Custom SVG matching the fourth icon (Handshake/Deal)
       icon: (
         <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" xmlns="http://www.w3.org/2000/svg">
           <path d="M17 14v-2a4 4 0 00-4-4H7a4 4 0 00-4 4v2" />
@@ -71,11 +68,14 @@ const WhyChooseUs = () => {
   ];
 
   return (
-    <section className="w-full bg-[#FAF8F5] py-20 lg:py-32 px-6 lg:px-24 font-sans text-left rtl:text-right">
+    <section 
+      className={`w-full bg-[#FAF8F5] py-20 lg:py-32 px-6 lg:px-24 font-sans ${isRtl ? 'text-right' : 'text-left'}`} 
+      dir={isRtl ? 'rtl' : 'ltr'}
+    >
       <div className="max-w-7xl mx-auto">
         
         {/* Section Header */}
-        <div className="mb-12">
+        <div className={`mb-12 flex flex-col ${isRtl ? 'items-start lg:items-start' : 'items-start'}`}>
           <span className="text-[#A48639] text-xs md:text-sm font-bold uppercase tracking-[0.15em] block mb-3">
             {t("strengths.overline")}
           </span>
@@ -89,13 +89,12 @@ const WhyChooseUs = () => {
           {strengthsData.map((item, index) => (
             <div 
               key={index} 
-              // দ্বিতীয় কার্ডটিতে ডিফল্ট শ্যাডো দেওয়া হয়েছে ছবির মতো, তবে হোভার করলে সবগুলোতে শ্যাডো আসবে
               className={`flex flex-col bg-[#F6F4EE] p-8 transition-all duration-300 hover:shadow-xl hover:-translate-y-1 ${
                 index === 1 ? 'shadow-lg' : 'shadow-none'
-              }`}
+              } ${isRtl ? 'items-start' : 'items-start'}`}
             >
-              {/* Icon */}
-              <div className="text-[#A48639] mb-8 flex justify-start rtl:justify-end">
+              {/* Icon - flex justify-start অ্যারাবিক মোডে অটোমেটিক ডান দিকে চলে যাবে dir="rtl" এর কারণে */}
+              <div className="text-[#A48639] mb-8 flex justify-start">
                 {item.icon}
               </div>
 
@@ -110,7 +109,7 @@ const WhyChooseUs = () => {
               </p>
 
               {/* Footer Text */}
-              <span className="text-[#A48639] text-[10px] font-bold uppercase tracking-widest mt-auto block text-left rtl:text-right">
+              <span className="text-[#A48639] text-[10px] font-bold uppercase tracking-widest mt-auto block">
                 {item.footer}
               </span>
             </div>
