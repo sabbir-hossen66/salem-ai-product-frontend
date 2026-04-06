@@ -52,7 +52,7 @@ export default function AboutOverviewSection() {
             ========================================= */}
             <section className="relative w-full bg-[#FAF8F4] py-20 lg:py-32 overflow-hidden">
                 
-                {/* Giant Watermark Background Text (image_a70de5.jpg ডিজাইন অনুযায়ী) */}
+                {/* Giant Watermark Background Text */}
                 <div className="absolute top-0 left-0 w-full h-full flex items-start justify-center pointer-events-none select-none z-0 overflow-hidden">
                     <span className="text-[120px] sm:text-[220px] lg:text-[320px] font-black text-black/[0.03] tracking-tighter uppercase leading-none mt-10 lg:mt-0">
                         {t("about_overview.watermark")}
@@ -62,13 +62,16 @@ export default function AboutOverviewSection() {
                 <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-stretch">
                         
-                        {/* Left Side: Image with Shadow */}
-                        <div className="relative w-full min-h-[400px] lg:min-h-0 shadow-2xl flex-grow group overflow-hidden">
+                        {/* Left Side: Image with Shadow - Height adjusted for Arabic */}
+                        <div className={`relative w-full shadow-2xl flex-grow group overflow-hidden 
+                            ${isRtl ? 'min-h-[550px] lg:min-h-[600px]' : 'min-h-[450px] lg:min-h-0'}`}>
                             <Image 
                                 src="https://i.ibb.co.com/21sF5mjt/d8160850f479e385ee33c51aa065fcb8989682a2.jpg" 
                                 alt="Company Office Logo Wall"
                                 fill
-                                className="object-cover transition-transform duration-700 group-hover:scale-105"
+                                // object-center নিশ্চিত করে যে লোগোটি ক্রপ হলেও মাঝখানে থাকে
+                                className="object-cover object-center transition-transform duration-700 group-hover:scale-105"
+                                priority
                             />
                             {/* হালকা গোল্ডেন ওভারলে */}
                             <div className="absolute inset-0 bg-[#9A7B26]/5 pointer-events-none"></div>
