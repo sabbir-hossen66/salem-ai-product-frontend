@@ -15,12 +15,12 @@ export default function ValueAndStrengths() {
             <section className="relative w-full py-20 lg:py-28 overflow-hidden">
                 <div className="absolute inset-0 z-0">
                     <Image
-                        src="https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=2069&auto=format&fit=crop"
+                        src="https://i.ibb.co.com/rG3PkKNp/6a4d9674c79e35d75038af7a3afba93b2bc4af4b.jpg"
                         alt="Office Background"
                         fill
                         className="object-cover object-center"
                     />
-                    <div className="absolute inset-0 bg-black/80"></div>
+                    <div className="absolute inset-0 bg-black/90"></div>
                 </div>
 
                 <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
