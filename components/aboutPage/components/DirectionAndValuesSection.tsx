@@ -1,10 +1,25 @@
 "use client";
 import Image from 'next/image';
-import React from 'react';
+import React, { useState } from 'react';
 import { useLang } from '@/context/LanguageContext';
 
 export default function DirectionAndValuesSection() {
     const { t } = useLang();
+
+    // মাউস মুভমেন্ট ট্র্যাক করার জন্য স্টেট
+    const [offset, setOffset] = useState({ x: 0, y: 0 });
+
+    const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
+        // স্ক্রিনের কেন্দ্রবিন্দু থেকে মাউসের দূরত্ব বের করা হচ্ছে (সেন্সিটিভিটি 30)
+        const x = (e.clientX - window.innerWidth / 2) / 30; 
+        const y = (e.clientY - window.innerHeight / 2) / 30;
+        setOffset({ x, y });
+    };
+
+    const handleMouseLeave = () => {
+        // মাউস সরিয়ে নিলে ডিফল্ট পজিশনে ফিরে আসবে
+        setOffset({ x: 0, y: 0 });
+    };
 
     return (
         <div className="w-full font-sans">
@@ -12,7 +27,11 @@ export default function DirectionAndValuesSection() {
             {/* =========================================
                 Top Section: OUR DIRECTION
             ========================================= */}
-            <section className="relative w-full py-20 lg:py-32 bg-[#111111] overflow-hidden">
+            <section 
+                className="relative w-full py-20 lg:py-32 bg-[#111111] overflow-hidden"
+                onMouseMove={handleMouseMove}
+                onMouseLeave={handleMouseLeave}
+            >
                 <div className="absolute inset-0 z-0">
                     <Image
                         src="https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=2000&auto=format&fit=crop"
@@ -34,8 +53,11 @@ export default function DirectionAndValuesSection() {
                         </h2>
                     </div>
 
-                 {/* Cards Grid */}
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8 items-stretch relative">
+                    {/* Cards Grid with Parallax Animation */}
+                    <div 
+                        className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8 items-stretch relative transition-transform duration-500 ease-out will-change-transform"
+                        style={{ transform: `translate3d(${offset.x}px, ${offset.y}px, 0)` }}
+                    >
 
                         {/* Card 1: Our Mission */}
                         {/* হোভার স্টাইল: ছবির মতো ডার্ক ব্যাকগ্রাউন্ড, স্কেল ১০৫%, এবং কালার পরিবর্তন */}
@@ -67,7 +89,7 @@ export default function DirectionAndValuesSection() {
                         </div>
 
                         {/* Card 2: Our Vision */}
-                        {/* ডিফল্ট হাইলাইট সরিয়ে ১ এবং ৩ এর মতো করা হয়েছে। হোভার স্টাইল unified। ছবির মতো ডার্ক ব্যাকগ্রাউন্ড, স্কেল ১০৫%, এবং কালার পরিবর্তন */}
+                        {/* ডিফল্ট হাইলাইট সরিয়ে ১ এবং ৩ এর মতো করা হয়েছে। হোভার স্টাইল unified। ছবির মতো ডার্ক ব্যাকগ্রাউন্ড, স্কেল ১০৫%, এবং কালার পরিবর্তন */}
                         <div className="group bg-white p-8 lg:p-10 flex flex-col justify-between shadow-xl cursor-pointer transition-all duration-300 hover:scale-105 hover:bg-[#454747] hover:shadow-2xl z-20 scale-100">
                             <div>
                                 {/* আইকন ডিফল্ট কালার: #745B00। হোভার কালার (requirement): #FFE180 */}
