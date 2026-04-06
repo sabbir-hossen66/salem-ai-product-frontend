@@ -34,10 +34,10 @@ export default function DirectionAndValuesSection() {
             >
                 <div className="absolute inset-0 z-0">
                     <Image
-                        src="https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=2000&auto=format&fit=crop"
+                        src="https://i.ibb.co.com/h1cNZ4qz/2e49b01d01857152701b4f3295cf0061928a1dc6.jpg"
                         alt="Office Background"
                         fill
-                        className="object-cover opacity-20"
+                        className="object-cover opacity-5"
                     />
                 </div>
 
