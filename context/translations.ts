@@ -154,8 +154,6 @@ export const translations: Record<string, Record<Language, string>> = {
   "strengths.card2_title":    { en: "Expertise", ar: "الخبرة" },
   "strengths.card2_desc":     { en: "Strong experience in managing, developing, and scaling businesses across industries with a focus on performance and long-term value creation.", ar: "خبرة قوية في إدارة وتطوير وتوسيع نطاق الأعمال عبر الصناعات مع التركيز على الأداء وخلق القيمة على المدى الطويل." },
   
-  "strengths.card3_title":    { en: "Innovation", ar: "الابتكار" },
-  "strengths.card3_desc":     { en: "We embrace innovation and digital transformation to improve efficiency, create opportunities, and stay competitive in evolving market environments.", ar: "نتبنى الابتكار والتحول الرقمي لتحسين الكفاءة، وخلق الفرص، والبقاء في دائرة المنافسة في بيئات السوق المتطورة." },
   
   "strengths.card4_title":    { en: "Partnerships", ar: "الشراكات" },
   "strengths.card4_desc":     { en: "We build strong partnerships to expand capabilities, access new markets, and create mutually beneficial long-term business relationships.", ar: "نبني شراكات قوية لتوسيع القدرات، والوصول إلى أسواق جديدة، وخلق علاقات عمل طويلة الأجل متبادلة المنفعة." },
@@ -506,5 +504,28 @@ export const translations: Record<string, Record<Language, string>> = {
 "partner.bottom_desc": { en: "We collaborate with investors, entrepreneurs, and organizations to identify strategic opportunities and develop high-performing businesses across key sectors.", ar: "نحن نتعاون مع المستثمرين ورواد الأعمال والمؤسسات لتحديد الفرص الاستراتيجية وتطوير أعمال عالية الأداء في القطاعات الرئيسية." },
 "partner.btn_portfolio": { en: "Explore Our Portfolio", ar: "استكشف محفظتنا" },
 "partner.btn_contact": { en: "Contact Our Team", ar: "تواصل مع فريقنا" },
+
+// Strengths / Why Choose Us Section
+"strengths.overline": { en: "OUR STRENGTHS", ar: "نقاط قوتنا" },
+"strengths.title": { en: "Why Choose Us", ar: "لماذا تختارنا" },
+
+// Card 1: Diversification
+"strengths.card1_title": { en: "Diversification", ar: "التنويع" },
+"strengths.card1_desc": { en: "We operate across multiple sectors to reduce risk, enhance stability, and ensure consistent growth through a well-balanced investment portfolio.", ar: "نحن نعمل عبر قطاعات متعددة للحد من المخاطر، وتعزيز الاستقرار، وضمان النمو المستمر من خلال محفظة استثمارية متوازنة." },
+
+// Card 2: Expertise
+"strengths.card2_title": { en: "Expertise", ar: "الخبرة" },
+"strengths.card2_desc": { en: "Strong experience in managing, developing, and scaling businesses across industries with a focus on performance and long-term value creation.", ar: "خبرة قوية في إدارة وتطوير وتوسيع نطاق الأعمال عبر الصناعات مع التركيز على الأداء وخلق قيمة طويلة الأمد." },
+
+// Card 3: Innovation
+"strengths.card3_title": { en: "Innovation", ar: "الابتكار" },
+"strengths.card3_desc": { en: "We embrace innovation and digital transformation to improve efficiency, create opportunities, and stay competitive in evolving market environments.", ar: "نحن نتبنى الابتكار والتحول الرقمي لتحسين الكفاءة، وخلق الفرص، والبقاء في صدارة المنافسة في بيئات السوق المتطورة." },
+
+// Card 4: Partnerships
+"strengths.card4_title": { en: "Partnerships", ar: "الشراكات" },
+"strengths.card4_desc": { en: "We build strong partnerships to expand capabilities, access new markets, and create mutually beneficial long-term business relationships.", ar: "نحن نبني شراكات قوية لتوسيع القدرات، والوصول إلى أسواق جديدة، وخلق علاقات عمل طويلة الأمد متبادلة المنفعة." },
+
+// Footer (যেটা আপনি চেয়েছিলেন)
+"strengths.card_footer": { en: "STRATEGIC BUSINESS UNIT", ar: "وحدة الأعمال الاستراتيجية" },
 
 };
