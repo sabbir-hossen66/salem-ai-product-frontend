@@ -32,9 +32,17 @@ export default function ContactSection() {
         </div>
       </div>
 
-      {/* Main Contact Details Section */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-32">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+    {/* Main Contact Details Section */}
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-32 overflow-hidden">
+        
+        {/* Background Watermark Text (image_9d2424.jpg এর মতো) */}
+        <div className={`absolute top-10 ${isRtl ? 'right-0' : 'left-0'} z-0 select-none pointer-events-none`}>
+          <span className="text-[150px] md:text-[250px] font-black text-gray-100/60 leading-none tracking-tighter uppercase">
+            Connect
+          </span>
+        </div>
+
+        <div className="relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           
           {/* Left Side: Contact Info */}
           <div className="space-y-12">
@@ -88,20 +96,20 @@ export default function ContactSection() {
           </div>
 
           {/* Right Side: Image Card */}
-          <div className="relative group">
-            <div className="relative aspect-[4/3] overflow-hidden rounded-sm shadow-2xl">
+          <div className="relative group z-10">
+            <div className="relative aspect-[4/3] overflow-hidden rounded-sm shadow-2xl border-2 border-white/50">
               <Image 
-                src="https://i.ibb.co.com/M5SPKJcb/53e7ed976205ca5c16086f7b706308f146ada001.png" // Replace with your office photo
-                alt="Office"
+                src="https://i.ibb.co.com/M5SPKJcb/53e7ed976205ca5c16086f7b706308f146ada001.png" // আপলোড করা ইমেজের মতো অফিস মিটিং রুমের ছবি
+                alt="Office Meeting Room"
                 fill
-                className="object-cover transition-transform duration-700 group-hover:scale-110"
+                className="object-cover transition-transform duration-700 group-hover:scale-105"
               />
               {/* Overlay Card (Matches Image 9978f3.png style) */}
-              <div className={`absolute bottom-8 ${isRtl ? 'left-8' : 'right-8'} bg-white p-8 max-w-[320px] shadow-2xl border-l-4 border-[#C5A028]`}>
+              <div className={`absolute bottom-6 ${isRtl ? 'left-6' : 'right-6'} bg-white p-6 md:p-8 max-w-[280px] md:max-w-[320px] shadow-2xl border-l-4 border-[#C5A028]`}>
                  <span className="text-[#745B00] text-[9px] font-bold tracking-widest uppercase block mb-3">
                     {t("contact.visit_title")}
                  </span>
-                 <p className="text-gray-700 text-sm leading-relaxed font-medium">
+                 <p className="text-gray-700 text-xs md:text-sm leading-relaxed font-medium">
                     {t("contact.visit_desc")}
                  </p>
               </div>
