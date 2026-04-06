@@ -15,12 +15,28 @@ export default function PartnershipPage() {
     <div className={`${isRtl ? 'rtl' : 'ltr'}`} dir={isRtl ? 'rtl' : 'ltr'}>
       
       {/* SECTION 1: HERO PARTNERSHIP */}
+      {/* ব্যাকগ্রাউন্ড কালার ডার্ক রাখা হয়েছে */}
       <section className="relative w-full bg-[#0A0A0A] overflow-hidden">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-32">
+        
+        {/* BACKGROUND IMAGE - image_7.png এর মতো */}
+        <div className="absolute inset-0 z-0">
+          <Image
+            src="https://i.ibb.co.com/gZbV4XTc/2905325c07ca002f78c284eab5faed9a2d20675b.png" // image_7.png এর ব্যাকগ্রাউন্ড ইমেজ (ইন্টারনেট থেকে সংগৃহীত একটি উদাহরণ)
+            alt="Partnership Background"
+            fill
+            className="object-cover"
+            priority // দ্রুত লোড হওয়ার জন্য priority দেওয়া হয়েছে
+          />
+          {/* DARK OVERLAY - টেক্সট ক্লিয়ার করার জন্য ১টি কালো লেয়ার */}
+          <div className="absolute inset-0 bg-black/90 z-10"></div>
+        </div>
+
+        {/* content container - z-20 দেওয়া হয়েছে যাতে এটি ওভারলের উপরে থাকে */}
+        <div className="relative z-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-32">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             
             {/* Left Content */}
-            <div className="z-10 space-y-8">
+            <div className="space-y-8">
               <div>
                 <span className="text-[#C5A028] text-xs font-bold tracking-[0.2em] uppercase block mb-4">
                   {t("partner.hero_overline")}
@@ -29,7 +45,7 @@ export default function PartnershipPage() {
                   {t("partner.hero_title")}
                 </h1>
               </div>
-              <p className="text-gray-400 text-sm md:text-base leading-relaxed max-w-xl">
+              <p className="text-gray-300 text-sm md:text-base leading-relaxed max-w-xl">
                 {t("partner.hero_desc")}
               </p>
               
@@ -52,7 +68,7 @@ export default function PartnershipPage() {
             <div className="relative group">
               <div className={`relative aspect-square md:aspect-video lg:aspect-square overflow-hidden border-t-4 border-l-4 border-[#C5A028] ${isRtl ? 'border-l-0 border-r-4' : ''}`}>
                 <Image 
-                  src="https://i.ibb.co.com/GvDJJpwF/f565157879f3a2a6d7fcb502b98c74e6b371456e.jpg" 
+                  src="https://i.ibb.co.com/GvDJJpwF/f565157879f3a2a6d7fcb502b98c74e6b371456e.jpg" // হ্যান্ডশেক ইমেজ (image_8.png থেকে)
                   alt="Handshake"
                   fill
                   className="object-cover"

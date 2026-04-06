@@ -111,9 +111,9 @@ export default function Hero() {
                     </div>
                 </div>
 
-                <div className="hidden lg:block lg:w-[45%] relative">
+                <div className="hidden lg:block lg:w-[55%] relative">
                     <Image
-                        src="https://i.ibb.co.com/5WQzB42Q/landing-1.png"
+                        src="https://i.ibb.co.com/j9rwCNxV/d9c43695f0b6644e777cdefacd54ae61b4ae6d70.png"
                         alt="Business Meeting"
                         fill
                         className="object-cover object-left"
@@ -123,7 +123,7 @@ export default function Hero() {
 
                 <div className="block lg:hidden w-full h-[350px] sm:h-[450px] relative">
                     <Image
-                        src="https://i.ibb.co.com/5WQzB42Q/landing-1.png"
+                        src="https://i.ibb.co.com/j9rwCNxV/d9c43695f0b6644e777cdefacd54ae61b4ae6d70.png"
                         alt="Business Meeting"
                         fill
                         className="object-cover object-center"

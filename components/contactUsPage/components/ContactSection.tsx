@@ -18,8 +18,8 @@ export default function ContactSection() {
         
         <div className="relative z-10 max-w-4xl mx-auto px-4">
           <div className="flex justify-center items-center gap-3 mb-6">
-            <div className="w-8 h-[1px] bg-[#C5A028]" />
-            <span className="text-[#C5A028] text-xs font-bold tracking-[0.2em] uppercase">
+            <div className="w-8 h-[1px] bg-white" />
+            <span className="text-white text-xs font-bold tracking-[0.2em] uppercase">
                 {t("contact.hero_subtitle")}
             </span>
           </div>
