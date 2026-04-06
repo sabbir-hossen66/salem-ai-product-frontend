@@ -465,6 +465,11 @@ export const translations: Record<string, Record<Language, string>> = {
   "contact.label_message": { en: "MESSAGE", ar: "الرسالة" },
   "contact.placeholder_name": { en: "e.g. Abdullah Al-Faisal", ar: "مثلاً: عبدالله الفيصل" },
   "contact.btn_submit": { en: "Submit Inquiry", ar: "إرسال الطلب" },
+  "contact.dop1":{en:"Institutional Investments", ar:"الاستثمارات المؤسسية"},
+  "contact.dop2":{en:"Partnership Inquiry", ar:"الشراكات الاستراتيجية"},
+  "contact.dop3":{en:"Business Development", ar:"تطوير الأعمال"},
+  "contact.dop4":{en:"General Inquiry", ar:"استفسار عام"},
+  "contact.new":{en:"Briefly outline your strategic objective...",ar:" حدد بإيجاز هدفك الاستراتيجي..."},
 
   // Partnership Section
   "partner.hero_overline": { en: "PARTNERSHIP", ar: "الشراكة" },

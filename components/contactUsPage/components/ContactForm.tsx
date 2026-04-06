@@ -74,9 +74,10 @@ export default function ContactForm() {
             </label>
             <div className="relative">
               <select className="w-full bg-[#EAE8E4] border-none p-4 text-gray-800 focus:ring-2 focus:ring-[#C5A028] outline-none appearance-none cursor-pointer">
-                <option>Institutional Investment</option>
-                <option>Partnership Inquiry</option>
-                <option>General Inquiry</option>
+                <option>{t("contact.dop1")}</option>
+                <option>{t("contact.dop2")}</option>
+                <option>{t("contact.dop3")}</option>
+                <option>{t("contact.dop4")}</option>
               </select>
               <div className={`absolute inset-y-0 ${isRtl ? 'left-4' : 'right-4'} flex items-center pointer-events-none text-gray-500`}>
                 <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7" /></svg>
@@ -91,7 +92,7 @@ export default function ContactForm() {
             </label>
             <textarea 
               rows={6}
-              placeholder="Briefly outline your strategic objective..."
+              placeholder={t("contact.new")}
               className="bg-[#EAE8E4] border-none p-4 text-gray-800 placeholder-gray-400 focus:ring-2 focus:ring-[#C5A028] outline-none transition-all resize-none"
             />
           </div>
