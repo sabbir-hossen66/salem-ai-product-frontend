@@ -128,7 +128,7 @@ export const translations: Record<string, Record<Language, string>> = {
 
   // Value & Strengths - Section 1 (How We Create Value)
   "value.overline":           { en: "Our Approach", ar: "نهجنا" },
-  "value.title":              { en: "How We Create Value", ar: "كيف نخلق القيمة" },
+  "value.title":              { en: "Building Value Across Every Sector", ar: "بناء القيمة عبر كل القطاعات" },
   
   "value.step1_title":        { en: "Acquire", ar: "الاستحواذ" },
   "value.step1_desc":         { en: "We identify promising businesses and opportunities with strong potential for growth, sustainability, and long-term strategic value creation across key sectors.", ar: "نحدد الأعمال والفرص الواعدة ذات الإمكانات القوية للنمو والاستدامة وخلق القيمة الاستراتيجية طويلة الأجل عبر القطاعات الرئيسية." },
