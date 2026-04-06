@@ -23,7 +23,7 @@ const ExploreCompaniesCTA = () => {
         <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto justify-center">
           
           {/* Primary Button */}
-          <button className="bg-[#A48639] hover:bg-[#8e7331] text-white px-8 py-3 text-sm md:text-base font-bold transition-colors duration-300 flex items-center justify-center gap-2">
+          <button className="bg-[linear-gradient(105deg,#745B00_0%,#FFC300_100%)] text-white px-8 py-3 text-sm md:text-base font-bold transition-colors duration-300 flex items-center justify-center gap-2">
             {t("explore_cta.btn_explore")}
             {/* RTL এর জন্য আইকন ঘোরানো হয়েছে */}
             <svg 
@@ -39,7 +39,7 @@ const ExploreCompaniesCTA = () => {
           </button>
 
           {/* Secondary Button */}
-          <button className="border border-[#A48639] text-[#A48639] hover:bg-[#A48639] hover:text-white px-8 py-3 text-sm md:text-base font-bold transition-colors duration-300 flex items-center justify-center gap-2">
+          <button className="border border-[#A48639] text-[#A48639] px-8 py-3 text-sm md:text-base font-bold transition-colors duration-300 flex items-center justify-center gap-2">
             {t("explore_cta.btn_contact")}
             {/* RTL এর জন্য আইকন ঘোরানো হয়েছে */}
             <svg 

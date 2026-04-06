@@ -114,26 +114,29 @@ const ApproachAndCommitment = () => {
           BOTTOM SECTION: Our Commitment
       ========================================= */}
       <section className="bg-[#111111] py-20 lg:py-32 px-6 lg:px-24">
-        <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-center gap-12 lg:gap-20">
+        {/* Changed items-center to items-stretch to make columns equal height */}
+        <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-stretch gap-12 lg:gap-20">
 
           {/* Left Side (Image) */}
-          <div className="w-full lg:w-1/2 relative group cursor-pointer">
+          <div className="w-full lg:w-1/2 relative group cursor-pointer flex flex-col min-h-[350px] lg:min-h-0">
             <div className="absolute top-0 left-0 rtl:left-auto rtl:right-0 w-2 h-full bg-[#A48639] z-10 -ml-4 lg:-ml-8 rtl:-ml-0 rtl:-mr-4 rtl:lg:-mr-8 hidden md:block transition-all duration-300 group-hover:w-3" />
-            <div className="overflow-hidden rounded-sm shadow-2xl">
+            
+            {/* Used relative and flex-grow so the wrapper takes full height */}
+            <div className="relative w-full flex-grow overflow-hidden rounded-sm shadow-2xl">
               <Image
                 src="https://i.ibb.co.com/5gDCqzKX/a2943aa1ffa1c19b0ff1ad719a5ca78c642ba3fd.jpg"
                 alt="Commitment Box"
-                className="w-full h-auto object-cover transition-transform duration-700 group-hover:scale-105"
-                width={500}
-                height={400}
+                fill
+                className="object-cover transition-transform duration-700 group-hover:scale-105"
               />
             </div>
+            
             {/* Gold overlay on hover */}
             <div className="absolute inset-0 bg-[#A48639]/0 group-hover:bg-[#A48639]/10 transition-all duration-500 rounded-sm pointer-events-none" />
           </div>
 
           {/* Right Side (Content) */}
-          <div className="w-full lg:w-1/2 text-white">
+          <div className="w-full lg:w-1/2 text-white flex flex-col justify-center py-4 lg:py-8">
             <span className="text-[#A48639] text-xs font-bold uppercase tracking-[0.15em] block mb-3">
               {t("commitment.overline")}
             </span>

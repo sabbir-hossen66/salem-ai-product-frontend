@@ -88,7 +88,7 @@ const HeroWithCards = () => {
           {/* Side-by-side buttons */}
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
               {/* Solid Button */}
-              <button className="flex items-center gap-2 px-8 py-3.5 bg-[#9F801C] text-white rounded-sm text-sm font-semibold transition duration-300 hover:bg-[#8B6E16] w-full sm:w-auto justify-center">
+              <button className="flex items-center gap-2 px-8 py-3.5 bg-[linear-gradient(105deg,#745B00_0%,#FFC300_100%)] text-white rounded-sm text-sm font-semibold transition duration-300 hover:bg-[#8B6E16] w-full sm:w-auto justify-center">
                   {t("hero_cards.btn_learn")}
                   {/* RTL এর জন্য আইকন ঘোরানো হয়েছে */}
                   <svg className="w-4 h-4 rtl:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -97,10 +97,10 @@ const HeroWithCards = () => {
               </button>
               
               {/* Outline Button */}
-              <button className="flex items-center gap-2 px-8 py-3.5 border border-[#9F801C] text-[#9F801C] rounded-sm text-sm font-semibold transition duration-300 hover:bg-[#9F801C] hover:text-white w-full sm:w-auto justify-center group">
+              <button className="flex items-center gap-2 px-6 py-3.5 border border-[#9F801C] text-[#9F801C] rounded-sm text-sm font-semibold transition duration-300 w-full sm:w-auto justify-center group">
                   {t("hero_cards.btn_contact")}
                   {/* RTL এর জন্য আইকন ঘোরানো হয়েছে */}
-                  <svg className="w-4 h-4 text-[#9F801C] group-hover:text-white rtl:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <svg className="w-4 h-4 text-[#9F801C]  rtl:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
                   </svg>
               </button>
