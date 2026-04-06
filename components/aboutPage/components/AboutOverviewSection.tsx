@@ -16,10 +16,10 @@ export default function AboutOverviewSection() {
                 {/* Background Image with Dark Overlay */}
                 <div className="absolute inset-0 z-0">
                     <Image 
-                        src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?q=80&w=2000&auto=format&fit=crop" 
+                        src="https://i.ibb.co.com/gZbV4XTc/2905325c07ca002f78c284eab5faed9a2d20675b.png" 
                         alt="Office Background"
                         fill
-                        className="object-cover opacity-30" 
+                        className="object-cover opacity-5" 
                     />
                 </div>
                 
@@ -49,22 +49,24 @@ export default function AboutOverviewSection() {
             {/* =========================================
                 Bottom Section: Overview & Features
             ========================================= */}
-            <section className="relative w-full bg-[#FAF8F4] py-20 lg:py-32 overflow-hidden">
+          <section className="relative w-full bg-[#FAF8F4] py-20 lg:py-32 overflow-hidden">
                 
                 {/* Giant Watermark Background Text */}
                 <div className="absolute top-0 left-0 w-full h-full flex items-center justify-center pointer-events-none select-none z-0 overflow-hidden">
-                    <span className="text-[100px] sm:text-[180px] lg:text-[250px] font-extrabold text-black/[0.03] tracking-tighter">
+                    <span className="text-[100px] sm:text-[180px] lg:text-[250px] font-extrabold text-black/[0.03] tracking-tighter whitespace-nowrap">
                         {t("about_overview.watermark")}
                     </span>
                 </div>
 
                 <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+                    {/* items-center পরিবর্তন করে items-stretch করা হয়েছে যাতে উভয় কলামের উচ্চতা সমান হয় */}
+                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-stretch">
                         
                         {/* Left Side: Image */}
-                        <div className="relative w-full aspect-[4/5] sm:aspect-square lg:aspect-[3/4] shadow-lg">
+                        {/* height সমান রাখার জন্য relative এবং flex-grow ব্যবহার করা হয়েছে */}
+                        <div className="relative w-full min-h-[400px] lg:min-h-0 shadow-lg flex-grow">
                             <Image 
-                                src="https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=1000&auto=format&fit=crop" 
+                                src="https://i.ibb.co.com/21sF5mjt/d8160850f479e385ee33c51aa065fcb8989682a2.jpg" 
                                 alt="Company Office Logo Wall"
                                 fill
                                 className="object-cover"
@@ -72,7 +74,7 @@ export default function AboutOverviewSection() {
                         </div>
 
                         {/* Right Side: Text Content */}
-                        <div className="flex flex-col">
+                        <div className="flex flex-col justify-center py-4 lg:py-8">
                             
                             <span className="text-[#9A7B26] text-xs font-bold tracking-[0.2em] uppercase mb-4">
                                 {t("about_overview.overview_overline")}
@@ -87,10 +89,10 @@ export default function AboutOverviewSection() {
                             </p>
 
                             {/* Two Columns Sub-features */}
-                            <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 sm:gap-0">
+                            <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 sm:gap-0 mt-auto">
                                 
                                 {/* Feature 1 */}
-                                {/* RTL এর জন্য প্যাডিং চেঞ্জ করা হয়েছে */}
+                                {/* RTL এর জন্য প্যাডিং চেঞ্জ করা হয়েছে */}
                                 <div className="flex flex-col sm:pr-6 rtl:sm:pr-0 rtl:sm:pl-6">
                                     <h4 className="text-[#9A7B26] font-bold text-base mb-2">
                                         {t("about_overview.feat1_title")}
@@ -101,7 +103,7 @@ export default function AboutOverviewSection() {
                                 </div>
                                 
                                 {/* Feature 2 (With Left Border on larger screens) */}
-                                {/* RTL এর জন্য বর্ডার এবং প্যাডিং চেঞ্জ করা হয়েছে */}
+                                {/* RTL এর জন্য বর্ডার এবং প্যাডিং চেঞ্জ করা হয়েছে */}
                                 <div className="flex flex-col sm:border-l rtl:sm:border-l-0 rtl:sm:border-r sm:border-[#C5A028]/40 sm:pl-6 rtl:sm:pl-0 rtl:sm:pr-6">
                                     <h4 className="text-[#9A7B26] font-bold text-base mb-2">
                                         {t("about_overview.feat2_title")}
