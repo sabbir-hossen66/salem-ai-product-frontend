@@ -10,6 +10,7 @@ const navLinks = [
   { key: "nav.about",       href: "/about" },
   { key: "nav.sectors",     href: "/sectors" },
   { key: "nav.whychooseus", href: "/why-choose-us" },
+  { key: "nav.contact",     href: "/contact-us" }, // আপনার নতুন কি (Key) এখানে আপডেট করা হয়েছে
 ];
 
 const GlobeIcon = ({ size = 18 }: { size?: number }) => (
@@ -56,11 +57,11 @@ export default function Navbar() {
           </Link>
 
           {/* Desktop Nav Links */}
-          <div className="hidden md:flex items-center space-x-8">
+          <div className="hidden md:flex items-center space-x-6 lg:space-x-8">
             {navLinks.map((link) => (
               <Link
                 key={link.href} href={link.href}
-                className={`font-bold text-sm tracking-wide transition-colors pb-1 ${
+                className={`font-bold text-sm tracking-wide transition-colors pb-1 uppercase ${
                   pathname === link.href
                     ? "text-[#C5A028] border-b-2 border-[#C5A028]"
                     : "text-gray-800 hover:text-[#C5A028]"
@@ -80,7 +81,7 @@ export default function Navbar() {
               <span className="text-gray-500 group-hover:text-[#C5A028] transition-colors">
                 <GlobeIcon size={18} />
               </span>
-              <span className="text-sm font-bold text-gray-700 group-hover:text-[#C5A028] transition-colors">
+              <span className="text-sm font-bold text-gray-700 group-hover:text-[#C5A028] transition-colors uppercase">
                 {lang === "en" ? "AR" : "EN"}
               </span>
             </button>
@@ -120,7 +121,7 @@ export default function Navbar() {
           {navLinks.map((link) => (
             <Link key={link.href} href={link.href}
               onClick={() => setIsMobileMenuOpen(false)}
-              className={`block px-3 py-2.5 font-bold rounded-md transition-colors ${
+              className={`block px-3 py-3 font-bold rounded-md transition-colors uppercase ${
                 pathname === link.href
                   ? "text-[#C5A028] bg-yellow-50"
                   : "text-gray-800 hover:text-[#C5A028] hover:bg-yellow-50"

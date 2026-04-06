@@ -469,6 +469,42 @@ export const translations: Record<string, Record<Language, string>> = {
     ar: "مسترشدين بتوجه واضح وابتكار، نوائم استثماراتنا مع الفرص المستقبلية لتعظيم القيمة" 
   },
 
-  
+  // Contact Section
+"contact.hero_subtitle": { en: "CONTACT US", ar: "اتصل بنا" },
+"contact.hero_title": { en: "Let's Start the Conversation", ar: "لنبدأ الحوار" },
+"contact.hero_desc": { en: "Reach out to connect with our team, discuss opportunities, and explore how we can support your business growth and success.", ar: "تواصل مع فريقنا لمناقشة الفرص واستكشاف كيف يمكننا دعم نمو عملك ونجاحه." },
+"contact.get_in_touch": { en: "GET IN TOUCH", ar: "ابق على تواصل" },
+"contact.h3_title": { en: "We're Here to Help", ar: "نحن هنا للمساعدة" },
+"contact.address_label": { en: "OUR ADDRESS", ar: "عنواننا" },
+"contact.address_val": { en: "Al Naseem – Makkah Al-Mukarramah", ar: "النسيم – مكة المكرمة" },
+"contact.phone_label": { en: "PHONE", ar: "الهاتف" },
+"contact.phone_time": { en: "Available 08:00 - 17:00 (GMT+3)", ar: "متاح 08:00 - 17:00 (GMT+3)" },
+"contact.email_label": { en: "EMAIL", ar: "البريد الإلكتروني" },
+"contact.visit_title": { en: "VISIT OR CONTACT US", ar: "قم بزيارتنا أو الاتصال بنا" },
+"contact.visit_desc": { en: "Our team is available to assist you with inquiries, partnerships, and business opportunities across all our sectors.", ar: "فريقنا متاح لمساعدتك في الاستفسارات والشراكات وفرص العمل في جميع قطاعاتنا." },
+
+"contact.form_overline": { en: "SEND A MESSAGE", ar: "أرسل رسالة" },
+"contact.form_title": { en: "Get in Touch with Our Team", ar: "تواصل مع فريقنا" },
+"contact.form_subtitle": { en: "Fill out the form below and our team will respond promptly to assist with your inquiries, partnerships, or business opportunities.", ar: "املأ النموذج أدناه وسيقوم فريقنا بالرد فوراً لمساعدتك في استفساراتك أو شراكاتك أو فرص العمل." },
+"contact.label_name": { en: "FULL NAME", ar: "الاسم الكامل" },
+"contact.label_email": { en: "CORPORATE EMAIL", ar: "البريد الإلكتروني للشركة" },
+"contact.label_phone": { en: "CONTACT NUMBER", ar: "رقم التواصل" },
+"contact.label_inquiry": { en: "NATURE OF INQUIRY", ar: "طبيعة الاستفسار" },
+"contact.label_message": { en: "MESSAGE", ar: "الرسالة" },
+"contact.placeholder_name": { en: "e.g. Abdullah Al-Faisal", ar: "مثلاً: عبدالله الفيصل" },
+"contact.btn_submit": { en: "Submit Inquiry", ar: "إرسال الطلب" },
+
+// Partnership Section
+"partner.hero_overline": { en: "PARTNERSHIP", ar: "الشراكة" },
+"partner.hero_title": { en: "Building Strong Connections", ar: "بناء علاقات قوية" },
+"partner.hero_desc": { en: "We believe in building long-term relationships based on trust, collaboration, and shared goals. Our approach focuses on understanding your needs, aligning strategies, and working together to achieve meaningful outcomes.", ar: "نحن نؤمن ببناء علاقات طويلة الأمد تقوم على الثقة والتعاون والأهداف المشتركة. يركজ نهجنا على فهم احتياجاتك ومواءمة الاستراتيجيات والعمل معاً لتحقيق نتائج ملموسة." },
+"partner.btn_explore": { en: "Explore Our Sectors", ar: "استكشف قطاعاتنا" },
+"partner.btn_work": { en: "Let's Work Together", ar: "لنعمل معاً" },
+
+// Bottom Section
+"partner.bottom_title": { en: "Partner With Us to Build Long-Term Value", ar: "شاركنا لبناء قيمة طويلة الأمد" },
+"partner.bottom_desc": { en: "We collaborate with investors, entrepreneurs, and organizations to identify strategic opportunities and develop high-performing businesses across key sectors.", ar: "نحن نتعاون مع المستثمرين ورواد الأعمال والمؤسسات لتحديد الفرص الاستراتيجية وتطوير أعمال عالية الأداء في القطاعات الرئيسية." },
+"partner.btn_portfolio": { en: "Explore Our Portfolio", ar: "استكشف محفظتنا" },
+"partner.btn_contact": { en: "Contact Our Team", ar: "تواصل مع فريقنا" },
 
 };
