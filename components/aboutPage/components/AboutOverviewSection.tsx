@@ -1,13 +1,14 @@
 "use client";
 import Image from 'next/image';
 import React from 'react';
-import { useLang } from '@/context/LanguageContext'; // সঠিক পাথ দিন
+import { useLang } from '@/context/LanguageContext';
 
 export default function AboutOverviewSection() {
-    const { t } = useLang();
+    const { t, lang } = useLang();
+    const isRtl = lang === 'ar';
 
     return (
-        <div className="w-full font-sans">
+        <div className="w-full font-sans" dir={isRtl ? 'rtl' : 'ltr'}>
             
             {/* =========================================
                 Top Section: Dark Hero / Header
@@ -49,34 +50,34 @@ export default function AboutOverviewSection() {
             {/* =========================================
                 Bottom Section: Overview & Features
             ========================================= */}
-          <section className="relative w-full bg-[#FAF8F4] py-20 lg:py-32 overflow-hidden">
+            <section className="relative w-full bg-[#FAF8F4] py-20 lg:py-32 overflow-hidden">
                 
-                {/* Giant Watermark Background Text */}
-                <div className="absolute top-0 left-0 w-full h-full flex items-center justify-center pointer-events-none select-none z-0 overflow-hidden">
-                    <span className="text-[100px] sm:text-[180px] lg:text-[250px] font-extrabold text-black/[0.03] tracking-tighter whitespace-nowrap">
+                {/* Giant Watermark Background Text (image_a70de5.jpg ডিজাইন অনুযায়ী) */}
+                <div className="absolute top-0 left-0 w-full h-full flex items-start justify-center pointer-events-none select-none z-0 overflow-hidden">
+                    <span className="text-[120px] sm:text-[220px] lg:text-[320px] font-black text-black/[0.03] tracking-tighter uppercase leading-none mt-10 lg:mt-0">
                         {t("about_overview.watermark")}
                     </span>
                 </div>
 
                 <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                    {/* items-center পরিবর্তন করে items-stretch করা হয়েছে যাতে উভয় কলামের উচ্চতা সমান হয় */}
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-stretch">
                         
-                        {/* Left Side: Image */}
-                        {/* height সমান রাখার জন্য relative এবং flex-grow ব্যবহার করা হয়েছে */}
-                        <div className="relative w-full min-h-[400px] lg:min-h-0 shadow-lg flex-grow">
+                        {/* Left Side: Image with Shadow */}
+                        <div className="relative w-full min-h-[400px] lg:min-h-0 shadow-2xl flex-grow group overflow-hidden">
                             <Image 
                                 src="https://i.ibb.co.com/21sF5mjt/d8160850f479e385ee33c51aa065fcb8989682a2.jpg" 
                                 alt="Company Office Logo Wall"
                                 fill
-                                className="object-cover"
+                                className="object-cover transition-transform duration-700 group-hover:scale-105"
                             />
+                            {/* হালকা গোল্ডেন ওভারলে */}
+                            <div className="absolute inset-0 bg-[#9A7B26]/5 pointer-events-none"></div>
                         </div>
 
                         {/* Right Side: Text Content */}
-                        <div className="flex flex-col justify-center py-4 lg:py-8">
+                        <div className={`flex flex-col justify-center py-4 lg:py-8 ${isRtl ? 'text-right' : 'text-left'}`}>
                             
-                            <span className="text-[#9A7B26] text-xs font-bold tracking-[0.2em] uppercase mb-4">
+                            <span className="text-[#9A7B26] text-xs font-bold tracking-[0.2em] uppercase mb-4 block">
                                 {t("about_overview.overview_overline")}
                             </span>
                             
@@ -84,17 +85,16 @@ export default function AboutOverviewSection() {
                                 {t("about_overview.overview_title")}
                             </h2>
                             
-                            <p className="text-gray-500 text-sm sm:text-base leading-relaxed mb-10">
+                            <p className="text-gray-500 text-sm sm:text-base leading-relaxed mb-10 max-w-xl">
                                 {t("about_overview.overview_desc")}
                             </p>
 
                             {/* Two Columns Sub-features */}
-                            <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 sm:gap-0 mt-auto">
+                            <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 sm:gap-0 mt-auto border-t border-gray-100 pt-10">
                                 
                                 {/* Feature 1 */}
-                                {/* RTL এর জন্য প্যাডিং চেঞ্জ করা হয়েছে */}
-                                <div className="flex flex-col sm:pr-6 rtl:sm:pr-0 rtl:sm:pl-6">
-                                    <h4 className="text-[#9A7B26] font-bold text-base mb-2">
+                                <div className={`flex flex-col ${isRtl ? 'sm:pl-6' : 'sm:pr-6'}`}>
+                                    <h4 className="text-[#9A7B26] font-bold text-lg mb-2">
                                         {t("about_overview.feat1_title")}
                                     </h4>
                                     <p className="text-gray-500 text-xs sm:text-sm leading-relaxed">
@@ -102,10 +102,9 @@ export default function AboutOverviewSection() {
                                     </p>
                                 </div>
                                 
-                                {/* Feature 2 (With Left Border on larger screens) */}
-                                {/* RTL এর জন্য বর্ডার এবং প্যাডিং চেঞ্জ করা হয়েছে */}
-                                <div className="flex flex-col sm:border-l rtl:sm:border-l-0 rtl:sm:border-r sm:border-[#C5A028]/40 sm:pl-6 rtl:sm:pl-0 rtl:sm:pr-6">
-                                    <h4 className="text-[#9A7B26] font-bold text-base mb-2">
+                                {/* Feature 2 (Vertical Border-সহ) */}
+                                <div className={`flex flex-col border-[#C5A028]/30 ${isRtl ? 'sm:border-r sm:pr-6' : 'sm:border-l sm:pl-6'}`}>
+                                    <h4 className="text-[#9A7B26] font-bold text-lg mb-2">
                                         {t("about_overview.feat2_title")}
                                     </h4>
                                     <p className="text-gray-500 text-xs sm:text-sm leading-relaxed">
@@ -119,7 +118,6 @@ export default function AboutOverviewSection() {
                     </div>
                 </div>
             </section>
-
         </div>
     );
 }
