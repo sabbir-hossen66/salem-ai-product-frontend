@@ -1,10 +1,52 @@
+"use client";
 import Image from 'next/image';
-import React from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { useLang } from '@/context/LanguageContext';
+
+/* ── Count-up hook: 0 থেকে শুরু, viewport-এ আসলে animate ── */
+function useCountUp(ref: React.RefObject<HTMLDivElement | null>, target: number, duration = 2400) {
+    const [count, setCount] = useState(0);
+    const [started, setStarted] = useState(false);
+
+    useEffect(() => {
+        const el = ref.current;
+        if (!el) return;
+        const observer = new IntersectionObserver(
+            ([entry]) => { if (entry.isIntersecting) setStarted(true); },
+            { threshold: 0.3 }
+        );
+        observer.observe(el);
+        return () => observer.disconnect();
+    }, [ref]);
+
+    useEffect(() => {
+        if (!started) return;
+        let startTime: number | null = null;
+        const step = (timestamp: number) => {
+            if (!startTime) startTime = timestamp;
+            const progress = Math.min((timestamp - startTime) / duration, 1);
+            const ease = 1 - Math.pow(1 - progress, 3); // easeOutCubic
+            setCount(Math.floor(ease * target));
+            if (progress < 1) requestAnimationFrame(step);
+        };
+        const animationId = requestAnimationFrame(step);
+        return () => cancelAnimationFrame(animationId);
+    }, [started, target, duration]);
+
+    return count;
+}
 
 export default function Hero() {
     const { t, lang } = useLang();
     const isAr = lang === "ar";
+
+    const stat1Ref = useRef<HTMLDivElement>(null);
+    const stat2Ref = useRef<HTMLDivElement>(null);
+    const stat3Ref = useRef<HTMLDivElement>(null);
+
+    const stat1 = useCountUp(stat1Ref, 6,   2200);
+    const stat2 = useCountUp(stat2Ref, 10,  2400);
+    const stat3 = useCountUp(stat3Ref, 100, 2600);
 
     return (
         <section className="relative w-full bg-[#fbfaf8]">
@@ -14,49 +56,58 @@ export default function Hero() {
             ========================================= */}
             <div className="relative flex flex-col lg:flex-row w-full min-h-[600px] lg:min-h-[700px]">
 
-                {/* Left Content Area — always stays LEFT, never flips */}
                 <div className="relative z-10 w-full lg:w-[55%] flex items-center">
                     <div
                         dir={isAr ? "rtl" : "ltr"}
                         className="w-full px-4 sm:px-8 lg:px-16 pt-16 pb-32 lg:pt-32 lg:pb-48"
                     >
-                        {/* Overline */}
-                        <div className={`flex items-center gap-4 mb-6 ${isAr ? "flex-row-reverse" : ""}`}>
-                            <div className="w-12 h-[2px] bg-[#C5A028]"></div>
+                        <div className="flex items-center gap-4 mb-6">
+                            {!isAr && <div className="w-12 h-[2px] bg-[#C5A028] shrink-0"></div>}
                             <span className="text-xs sm:text-sm font-bold text-[#C5A028] tracking-widest uppercase">
                                 {t("hero.subtitle")}
                             </span>
+                            {isAr && <div className="w-12 h-[2px] bg-[#C5A028] shrink-0"></div>}
                         </div>
 
-                        {/* Heading */}
                         <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-gray-900 leading-[1.1] tracking-tight mb-6">
                             {t("hero.title")}
                         </h1>
 
-                        {/* Description */}
                         <p className="text-base sm:text-lg text-gray-600 mb-10 max-w-lg leading-relaxed">
                             {t("hero.description")}
                         </p>
 
-                        {/* Buttons */}
-                        <div className={`flex flex-col sm:flex-row gap-4 ${isAr ? "sm:flex-row-reverse" : ""}`}>
-                            <button className="bg-gradient-to-r from-[#745B00] to-[#FFC300] text-white px-8 py-3.5 flex justify-center items-center font-semibold hover:opacity-90 transition-opacity shadow-md">
+                        <div className={`flex flex-col sm:flex-row gap-4 ${isAr ? "sm:flex-row-reverse justify-end" : ""}`}>
+                            <button className="bg-gradient-to-r from-[#745B00] to-[#FFC300] text-white px-8 py-3.5 flex justify-center items-center gap-2 font-semibold hover:opacity-90 transition-opacity shadow-md">
+                                {isAr && (
+                                    <svg className="w-5 h-5 rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                                    </svg>
+                                )}
                                 {t("hero.btn1")}
-                                <svg className={`w-5 h-5 ${isAr ? "mr-2 rotate-180" : "ml-2"}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
-                                </svg>
+                                {!isAr && (
+                                    <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                                    </svg>
+                                )}
                             </button>
-                            <button className="border border-[#C5A028] text-[#745B00] bg-white px-8 py-3.5 flex justify-center items-center font-semibold hover:bg-[#C5A028] hover:text-white transition-colors shadow-sm">
+                            <button className="border border-[#C5A028] text-[#745B00] bg-white px-8 py-3.5 flex justify-center items-center gap-2 font-semibold hover:bg-[#C5A028] hover:text-white transition-colors shadow-sm">
+                                {isAr && (
+                                    <svg className="w-5 h-5 rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                                    </svg>
+                                )}
                                 {t("hero.btn2")}
-                                <svg className={`w-5 h-5 ${isAr ? "mr-2 rotate-180" : "ml-2"}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
-                                </svg>
+                                {!isAr && (
+                                    <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                                    </svg>
+                                )}
                             </button>
                         </div>
                     </div>
                 </div>
 
-                {/* Right Image — always stays RIGHT, no dir */}
                 <div className="hidden lg:block lg:w-[45%] relative">
                     <Image
                         src="https://i.ibb.co.com/5WQzB42Q/landing-1.png"
@@ -67,7 +118,6 @@ export default function Hero() {
                     />
                 </div>
 
-                {/* Mobile Image */}
                 <div className="block lg:hidden w-full h-[350px] sm:h-[450px] relative">
                     <Image
                         src="https://i.ibb.co.com/5WQzB42Q/landing-1.png"
@@ -106,7 +156,7 @@ export default function Hero() {
 
 
             {/* =========================================
-                3. Statistics Section
+                3. Statistics Section — 0 থেকে count-up
             ========================================= */}
             <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-32 pt-16 z-0 overflow-hidden lg:overflow-visible">
 
@@ -116,30 +166,39 @@ export default function Hero() {
 
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-20 lg:gap-12 relative z-10">
 
+                    {/* Stat 1 */}
                     <div dir={isAr ? "rtl" : "ltr"} className="relative flex flex-col">
                         <span className="absolute -top-16 -left-4 sm:-left-8 text-[120px] sm:text-[150px] font-black text-black/[0.04] leading-none select-none -z-10 pointer-events-none">01</span>
-                        <div className="relative z-10">
-                            <h2 className="text-6xl sm:text-7xl font-extrabold text-gray-900 tracking-tighter">6<span className="text-[#C5A028]">+</span></h2>
+                        <div ref={stat1Ref} className="relative z-10">
+                            <h2 className="text-6xl sm:text-7xl font-extrabold text-gray-900 tracking-tighter tabular-nums">
+                                {stat1}<span className="text-[#C5A028]">+</span>
+                            </h2>
                             <div className="w-10 h-1 bg-[#C5A028] mt-4 mb-6"></div>
                             <h4 className="text-xl font-bold text-gray-900 mb-4">{t("hero.stat1.title")}</h4>
                             <p className="text-gray-600 text-sm leading-relaxed">{t("hero.stat1.desc")}</p>
                         </div>
                     </div>
 
+                    {/* Stat 2 */}
                     <div dir={isAr ? "rtl" : "ltr"} className="relative flex flex-col">
                         <span className="absolute -top-16 -left-4 sm:-left-8 text-[120px] sm:text-[150px] font-black text-black/[0.04] leading-none select-none -z-10 pointer-events-none">02</span>
-                        <div className="relative z-10">
-                            <h2 className="text-6xl sm:text-7xl font-extrabold text-gray-900 tracking-tighter">10<span className="text-[#C5A028]">+</span></h2>
+                        <div ref={stat2Ref} className="relative z-10">
+                            <h2 className="text-6xl sm:text-7xl font-extrabold text-gray-900 tracking-tighter tabular-nums">
+                                {stat2}<span className="text-[#C5A028]">+</span>
+                            </h2>
                             <div className="w-10 h-1 bg-[#C5A028] mt-4 mb-6"></div>
                             <h4 className="text-xl font-bold text-gray-900 mb-4">{t("hero.stat2.title")}</h4>
                             <p className="text-gray-600 text-sm leading-relaxed">{t("hero.stat2.desc")}</p>
                         </div>
                     </div>
 
+                    {/* Stat 3 */}
                     <div dir={isAr ? "rtl" : "ltr"} className="relative flex flex-col">
                         <span className="absolute -top-16 -left-4 sm:-left-8 text-[120px] sm:text-[150px] font-black text-black/[0.04] leading-none select-none -z-10 pointer-events-none">03</span>
-                        <div className="relative z-10">
-                            <h2 className="text-6xl sm:text-7xl font-extrabold text-gray-900 tracking-tighter">100%</h2>
+                        <div ref={stat3Ref} className="relative z-10">
+                            <h2 className="text-6xl sm:text-7xl font-extrabold text-gray-900 tracking-tighter tabular-nums">
+                                {stat3}<span className="text-[#C5A028]">%</span>
+                            </h2>
                             <div className="w-10 h-1 bg-[#C5A028] mt-4 mb-6"></div>
                             <h4 className="text-xl font-bold text-gray-900 mb-4">{t("hero.stat3.title")}</h4>
                             <p className="text-gray-600 text-sm leading-relaxed">{t("hero.stat3.desc")}</p>

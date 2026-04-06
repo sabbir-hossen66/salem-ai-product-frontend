@@ -12,6 +12,18 @@ const navLinks = [
   { key: "nav.whychooseus", href: "/why-choose-us" },
 ];
 
+const GlobeIcon = ({ size = 18 }: { size?: number }) => (
+  <svg
+    width={size} height={size} viewBox="0 0 24 24"
+    fill="none" stroke="currentColor" strokeWidth="2"
+    strokeLinecap="round" strokeLinejoin="round"
+  >
+    <circle cx="12" cy="12" r="10" />
+    <line x1="2" y1="12" x2="22" y2="12" />
+    <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" />
+  </svg>
+);
+
 export default function Navbar() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
@@ -59,40 +71,28 @@ export default function Navbar() {
             ))}
           </div>
 
-          {/* Right Side: Lang Switch + Contact */}
+          {/* Desktop Right Side: Lang Switch */}
           <div className="hidden md:flex items-center gap-3">
-
-            {/* Language Toggle — Flag + Label */}
             <button
               onClick={toggleLang}
               className="group flex items-center gap-2 px-4 py-2 rounded-full border border-gray-200 hover:border-[#C5A028] bg-gray-50 hover:bg-[#fffbf0] transition-all duration-300"
             >
-              <span className="text-lg leading-none">
-                {lang === "en" ? "🇸🇦" : "🇬🇧"}
+              <span className="text-gray-500 group-hover:text-[#C5A028] transition-colors">
+                <GlobeIcon size={18} />
               </span>
               <span className="text-sm font-bold text-gray-700 group-hover:text-[#C5A028] transition-colors">
                 {lang === "en" ? "AR" : "EN"}
               </span>
             </button>
-
-            {/* Contact Button */}
-            {/* <button className="bg-linear-to-r from-[#745B00] to-[#FFC300] text-white px-6 py-3.5 flex items-center font-semibold hover:opacity-90 transition-opacity">
-              {t("nav.contact")}
-              <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
-              </svg>
-            </button> */}
           </div>
 
           {/* Mobile Right Side */}
           <div className="md:hidden flex items-center gap-2">
             <button
               onClick={toggleLang}
-              className="flex items-center gap-1.5 border border-gray-200 rounded-full px-3 py-1.5 bg-gray-50 hover:border-[#C5A028] transition-all"
+              className="flex items-center gap-1.5 border border-gray-200 rounded-full px-3 py-1.5 bg-gray-50 hover:border-[#C5A028] transition-all text-gray-500"
             >
-              <span className="text-base leading-none">
-                {lang === "en" ? "🇸🇦" : "🇬🇧"}
-              </span>
+              <GlobeIcon size={15} />
               <span className="text-xs font-bold text-gray-700">
                 {lang === "en" ? "AR" : "EN"}
               </span>
@@ -129,12 +129,6 @@ export default function Navbar() {
               {t(link.key)}
             </Link>
           ))}
-          {/* <button className="w-full mt-3 bg-linear-to-r from-[#745B00] to-[#FFC300] text-white px-6 py-3 flex items-center justify-center font-semibold hover:opacity-90 transition-opacity">
-            {t("nav.contact")}
-            <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
-            </svg>
-          </button> */}
         </div>
       )}
     </nav>

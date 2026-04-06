@@ -41,7 +41,7 @@ export default function ValueAndStrengths() {
                         
                         {/* Step 1 */}
                         <div className="flex flex-col">
-                            <div className="w-16 h-16 bg-[#9A7B26] flex items-center justify-center text-white text-xl font-bold mb-6 shadow-lg">
+                            <div className="w-16 h-16 bg-[#745B00] hover:bg-[#C5A028] transition-colors duration-300 flex items-center justify-center text-white text-xl font-bold mb-6 shadow-lg">
                                 01
                             </div>
                             <h3 className="text-[#C5A028] text-xl font-bold mb-3">{t("value.step1_title")}</h3>
@@ -52,7 +52,7 @@ export default function ValueAndStrengths() {
 
                         {/* Step 2 */}
                         <div className="flex flex-col">
-                            <div className="w-16 h-16 bg-[#9A7B26] flex items-center justify-center text-white text-xl font-bold mb-6 shadow-lg">
+                            <div className="w-16 h-16 bg-[#745B00] hover:bg-[#C5A028] transition-colors duration-300 flex items-center justify-center text-white text-xl font-bold mb-6 shadow-lg">
                                 02
                             </div>
                             <h3 className="text-[#C5A028] text-xl font-bold mb-3">{t("value.step2_title")}</h3>
@@ -63,7 +63,7 @@ export default function ValueAndStrengths() {
 
                         {/* Step 3 */}
                         <div className="flex flex-col">
-                            <div className="w-16 h-16 bg-[#9A7B26] flex items-center justify-center text-white text-xl font-bold mb-6 shadow-lg">
+                            <div className="w-16 h-16 bg-[#745B00] hover:bg-[#C5A028] transition-colors duration-300 flex items-center justify-center text-white text-xl font-bold mb-6 shadow-lg">
                                 03
                             </div>
                             <h3 className="text-[#C5A028] text-xl font-bold mb-3">{t("value.step3_title")}</h3>
@@ -74,7 +74,7 @@ export default function ValueAndStrengths() {
 
                         {/* Step 4 */}
                         <div className="flex flex-col">
-                            <div className="w-16 h-16 bg-[#9A7B26] flex items-center justify-center text-white text-xl font-bold mb-6 shadow-lg">
+                            <div className="w-16 h-16 bg-[#745B00] hover:bg-[#C5A028] transition-colors duration-300 flex items-center justify-center text-white text-xl font-bold mb-6 shadow-lg">
                                 04
                             </div>
                             <h3 className="text-[#C5A028] text-xl font-bold mb-3">{t("value.step4_title")}</h3>
