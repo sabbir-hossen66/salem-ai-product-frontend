@@ -14,10 +14,10 @@ export default function ImpactAndPartnership() {
                 <div className="absolute inset-0 z-0">
                     {/* Note: Replace the src with your actual background image */}
                     <Image
-                        src="https://images.unsplash.com/photo-1513628253939-010e64ac66cd?q=80&w=1920&auto=format&fit=crop"
+                        src="https://i.ibb.co.com/p6qL9JWn/c3a8ead1973e08ff79f0df876e10b1cadf3467cd.png"
                         alt="Cityscape Background"
                         fill
-                        className="object-cover opacity-20" 
+                        className="object-cover opacity-10" 
                     />
                 </div>
 

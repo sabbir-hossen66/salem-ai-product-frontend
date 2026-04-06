@@ -17,10 +17,10 @@ export default function ExploreAndValueSection() {
                 <div className="absolute inset-0 z-0">
                     <Image
                         // Replace with your actual background image
-                        src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?q=80&w=2000&auto=format&fit=crop"
+                        src="https://i.ibb.co.com/767bb4k/35fd41fb2dbace30a32af0055fdf0ddc19281379.png"
                         alt="Background Pattern"
                         fill
-                        className="object-cover opacity-30" 
+                        className="object-cover opacity-20" 
                     />
                     <div className="absolute inset-0 bg-black/50"></div>
                 </div>
@@ -109,7 +109,7 @@ export default function ExploreAndValueSection() {
                         <div className="relative w-full h-[400px] sm:h-[500px] lg:h-[600px] shadow-xl rounded-sm overflow-hidden">
                             <Image 
                                 // Replace with actual plant/coins image
-                                src="https://images.unsplash.com/photo-1533421821268-87e42c1d70b0?q=80&w=1000&auto=format&fit=crop" 
+                                src="https://i.ibb.co.com/wNV0mM1x/5cf373b1d4024da6924488ecea87571b0c2e9aae.jpg" 
                                 alt="Plant growing from coins" 
                                 fill
                                 className="object-cover hover:scale-105 transition-transform duration-700"
