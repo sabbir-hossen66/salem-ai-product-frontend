@@ -99,7 +99,7 @@ export default function ContactForm() {
          {/* Submit Button Section */}
 <div className="md:col-span-2 flex justify-center mt-8">
   <button 
-    className="relative flex items-center gap-3 px-10 py-4 font-bold text-sm text-white transition-all duration-300 hover:shadow-[0_10px_20px_rgba(116,91,0,0.3)] active:scale-95 group overflow-hidden"
+    className="cursor-pointer relative flex items-center gap-3 px-10 py-4 font-bold text-sm text-white transition-all duration-300 hover:shadow-[0_10px_20px_rgba(116,91,0,0.3)] active:scale-95 group overflow-hidden"
     style={{
       background: 'linear-gradient(105deg, #745B00 0%, #FFC300 100%)'
     }}

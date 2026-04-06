@@ -76,7 +76,7 @@ export default function Navbar() {
           <div className="hidden md:flex items-center gap-3">
             <button
               onClick={toggleLang}
-              className="group flex items-center gap-2 px-4 py-2 rounded-full border border-gray-200 hover:border-[#C5A028] bg-gray-50 hover:bg-[#fffbf0] transition-all duration-300"
+              className="group flex items-center gap-2 px-4 py-2 rounded-full cursor-pointer border border-gray-200 hover:border-[#C5A028] bg-gray-50 hover:bg-[#fffbf0] transition-all duration-300"
             >
               <span className="text-gray-500 group-hover:text-[#C5A028] transition-colors">
                 <GlobeIcon size={18} />
@@ -91,7 +91,7 @@ export default function Navbar() {
           <div className="md:hidden flex items-center gap-2">
             <button
               onClick={toggleLang}
-              className="flex items-center gap-1.5 border border-gray-200 rounded-full px-3 py-1.5 bg-gray-50 hover:border-[#C5A028] transition-all text-gray-500"
+              className="cursor-pointer flex items-center gap-1.5 border border-gray-200 rounded-full px-3 py-1.5 bg-gray-50 hover:border-[#C5A028] transition-all text-gray-500"
             >
               <GlobeIcon size={15} />
               <span className="text-xs font-bold text-gray-700">
@@ -101,7 +101,7 @@ export default function Navbar() {
 
             <button
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              className="text-gray-800 hover:text-[#C5A028] focus:outline-none p-1"
+              className="text-gray-800 hover:text-[#C5A028] focus:outline-none p-1 cursor-pointer"
             >
               <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 {isMobileMenuOpen ? (

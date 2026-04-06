@@ -78,7 +78,7 @@ export default function Hero() {
                         </p>
 
                         <div className={`flex flex-col sm:flex-row gap-4 ${isAr ? "sm:flex-row-reverse justify-end" : ""}`}>
-                            <button className="bg-gradient-to-r from-[#745B00] to-[#FFC300] text-white px-8 py-3.5 flex justify-center items-center gap-2 font-semibold hover:opacity-90 transition-opacity shadow-md">
+                            <button className="cursor-pointer bg-gradient-to-r from-[#745B00] to-[#FFC300] text-white px-8 py-3.5 flex justify-center items-center gap-2 font-semibold hover:opacity-90 transition-opacity shadow-md">
                                  {t("hero.btn1")}
                                 {isAr && (
                                     
@@ -93,7 +93,7 @@ export default function Hero() {
                                     </svg>
                                 )}
                             </button>
-                            <button className="border border-[#C5A028] text-[#745B00] bg-white px-8 py-3.5 flex justify-center items-center gap-2 font-semibold hover:bg-[#C5A028] hover:text-white transition-colors shadow-sm">
+                            <button className="cursor-pointer border border-[#C5A028] text-[#745B00] bg-white px-8 py-3.5 flex justify-center items-center gap-2 font-semibold hover:bg-[#C5A028] hover:text-white transition-colors shadow-sm">
                                  {t("hero.btn2")}
                                 {isAr && (
                                     <svg className="w-5 h-5 rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">

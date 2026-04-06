@@ -81,7 +81,7 @@ export default function ImpactAndPartnership() {
                     {/* Buttons */}
                     <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
                         {/* Solid Button */}
-                        <button className="w-full sm:w-auto px-8 py-3.5 bg-[linear-gradient(105deg,#745B00_0%,#FFC300_100%)] transition-colors duration-300 text-white text-sm font-semibold flex items-center justify-center gap-2">
+                        <button className="cursor-pointer w-full sm:w-auto px-8 py-3.5 bg-[linear-gradient(105deg,#745B00_0%,#FFC300_100%)] transition-colors duration-300 text-white text-sm font-semibold flex items-center justify-center gap-2">
                             {t("partnership.btn_explore")}
                             {/* RTL এর জন্য আইকন ঘোরানো হয়েছে */}
                             <svg className="w-4 h-4 rtl:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -90,7 +90,7 @@ export default function ImpactAndPartnership() {
                         </button>
                         
                         {/* Outline Button */}
-                        <button className="w-full sm:w-auto px-8 py-3.5 bg-white border border-[#9E801C] text-[#9E801C] hover:bg-gray-50 transition-colors duration-300 text-sm font-semibold flex items-center justify-center gap-2">
+                        <button className="cursor-pointer w-full sm:w-auto px-8 py-3.5 bg-white border border-[#9E801C] text-[#9E801C] hover:bg-gray-50 transition-colors duration-300 text-sm font-semibold flex items-center justify-center gap-2">
                             {t("partnership.btn_contact")}
                             {/* RTL এর জন্য আইকন ঘোরানো হয়েছে */}
                             <svg className="w-4 h-4 rtl:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">

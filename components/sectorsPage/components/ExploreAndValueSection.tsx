@@ -40,7 +40,7 @@ export default function ExploreAndValueSection() {
 
                         {/* Right Side: Button */}
                         <div className="shrink-0">
-                            <button className="px-8 py-3.5 bg-linear-to-r from-[#745B00] to-[#FFC300] hover:bg-[#A88822] transition-colors duration-300 text-white text-sm font-semibold flex items-center justify-center gap-2 rounded-sm shadow-lg">
+                            <button className="cursor-pointer px-8 py-3.5 bg-linear-to-r from-[#745B00] to-[#FFC300] hover:bg-[#A88822] transition-colors duration-300 text-white text-sm font-semibold flex items-center justify-center gap-2 rounded-sm shadow-lg">
                                 {t("explore.btn_contact")}
                                 {/* RTL এর জন্য অ্যারো ঘোরানো হয়েছে */}
                                 <svg className="w-4 h-4 rtl:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">

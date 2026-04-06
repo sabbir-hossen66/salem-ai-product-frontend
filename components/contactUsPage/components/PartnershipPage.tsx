@@ -52,12 +52,12 @@ export default function PartnershipPage() {
               <div className="flex flex-wrap gap-4 pt-4">
                 <button 
                   style={goldenGradient}
-                  className="px-8 py-3 text-white font-bold text-xs uppercase tracking-wider flex items-center gap-3 hover:shadow-lg transition-all"
+                  className="cursor-pointer px-8 py-3 text-white font-bold text-xs uppercase tracking-wider flex items-center gap-3 hover:shadow-lg transition-all"
                 >
                   {t("partner.btn_explore")}
                   <svg className={`w-4 h-4 ${isRtl ? 'rotate-180' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14 5l7 7m0 0l-7 7m7-7H3" /></svg>
                 </button>
-                <button className="px-8 py-3 border border-[#C5A028] text-[#C5A028] font-bold text-xs uppercase tracking-wider hover:bg-[#C5A028] hover:text-white transition-all flex items-center gap-3">
+                <button className="cursor-pointer px-8 py-3 border border-[#C5A028] text-[#C5A028] font-bold text-xs uppercase tracking-wider hover:bg-[#C5A028] hover:text-white transition-all flex items-center gap-3">
                    {t("partner.btn_work")}
                    <svg className={`w-4 h-4 ${isRtl ? 'rotate-180' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14 5l7 7m0 0l-7 7m7-7H3" /></svg>
                 </button>
@@ -94,7 +94,7 @@ export default function PartnershipPage() {
     <div className="flex flex-wrap justify-center gap-4">
       <button 
         style={goldenGradient}
-        className="px-10 py-4 text-white font-bold text-xs uppercase tracking-wider flex items-center gap-3 hover:shadow-xl transition-all active:scale-95 group"
+        className= "cursor-pointer px-10 py-4 text-white font-bold text-xs uppercase tracking-wider flex items-center gap-3 hover:shadow-xl transition-all active:scale-95 group"
       >
         {t("partner.btn_portfolio")}
         <svg 
@@ -105,7 +105,7 @@ export default function PartnershipPage() {
         </svg>
       </button>
 
-      <button className="px-10 py-4 border border-[#C5A028] text-[#745B00] font-bold text-xs uppercase tracking-wider hover:bg-[#F9F5EB] transition-all flex items-center gap-3 shadow-sm group">
+      <button className="px-10 py-4 border cursor-pointer border-[#C5A028] text-[#745B00] font-bold text-xs uppercase tracking-wider hover:bg-[#F9F5EB] transition-all flex items-center gap-3 shadow-sm group">
          {t("partner.btn_contact")}
          <svg 
            className={`w-4 h-4 transition-transform group-hover:translate-x-1 ${isRtl ? 'rotate-180 group-hover:-translate-x-1' : ''}`} 
