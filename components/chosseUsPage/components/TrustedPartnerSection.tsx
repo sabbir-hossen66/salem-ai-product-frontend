@@ -13,7 +13,7 @@ const TrustedPartnerSection = () => {
       <div className="absolute inset-0 z-0">
         <Image
           // এখানে আপনার আসল ব্যাকগ্রাউন্ড ইমেজের পাথ দিন (যেমন: /trusted-partner-bg.jpg)
-          src="https://i.ibb.co.com/R47Ctrj2/81e094e712059e182faad87fa952c0e7dbbb9782.png"
+          src="https://i.ibb.co.com/767bb4k/35fd41fb2dbace30a32af0055fdf0ddc19281379.png"
           alt="Trusted Partner Background"
           fill
           className="object-cover opacity-40" 

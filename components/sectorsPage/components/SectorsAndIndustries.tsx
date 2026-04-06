@@ -16,10 +16,10 @@ export default function SectorsAndIndustries() {
                 {/* Background Image Overlay */}
                 <div className="absolute inset-0 z-0">
                     <Image
-                        src="https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=2000&auto=format&fit=crop"
+                        src="https://i.ibb.co.com/MyfKsyFD/81e094e712059e182faad87fa952c0e7dbbb9782.png"
                         alt="Office Background"
                         fill
-                        className="object-cover opacity-20" 
+                        className="object-cover opacity-5" 
                     />
                 </div>
 
