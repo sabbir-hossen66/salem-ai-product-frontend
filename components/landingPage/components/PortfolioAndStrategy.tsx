@@ -100,13 +100,13 @@ export default function PortfolioAndStrategy() {
                 {/* Background Image & Overlay */}
                 <div className="absolute inset-0 z-0">
                     <Image 
-                        src="https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=2069&auto=format&fit=crop" 
+                        src="https://i.ibb.co.com/XxmsDvWP/6da230868cf47e5ec9bfe12ef54ed9ff69d08153.png" 
                         alt="Office Desk Background"
                         fill
                         className="object-cover object-center"
                     />
                     {/* Dark gradient/solid overlay */}
-                    <div className="absolute inset-0 bg-black/80"></div>
+                    <div className="absolute inset-0 bg-black/90"></div>
                 </div>
 
                 <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

@@ -34,56 +34,78 @@ export default function DirectionAndValuesSection() {
                         </h2>
                     </div>
 
-                    {/* Cards Grid */}
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8 items-stretch">
+                 {/* Cards Grid */}
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8 items-stretch relative">
 
                         {/* Card 1: Our Mission */}
-                        <div className="group bg-white p-8 lg:p-10 flex flex-col justify-between shadow-xl cursor-pointer transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl hover:bg-[#fffbf0]">
+                        {/* হোভার স্টাইল: ছবির মতো ডার্ক ব্যাকগ্রাউন্ড, স্কেল ১০৫%, এবং কালার পরিবর্তন */}
+                        <div className="group bg-white p-8 lg:p-10 flex flex-col justify-between shadow-xl cursor-pointer transition-all duration-300 hover:scale-105 hover:bg-[#454747] hover:shadow-2xl z-20">
                             <div>
-                                <svg className="w-10 h-10 text-[#C5A028] mb-6 transition-transform duration-300 group-hover:scale-110" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
+                                <svg xmlns="http://www.w3.org/2000/svg" width="55" height="55" viewBox="0 0 55 55" fill="none">
+                                    <g clipPath="url(#clip0_208_39)">
+                                        {/* আইকন ডিফল্ট কালার: #745B00। হোভার কালার (requirement): #FFE180 */}
+                                        <path d="M28.0817 6.88304C27.8885 6.87768 27.6946 6.875 27.5 6.875C16.1091 6.875 6.875 16.1091 6.875 27.5C6.875 38.8908 16.1091 48.125 27.5 48.125C38.8908 48.125 48.125 38.8908 48.125 27.5C48.125 27.3054 48.1222 27.1115 48.1171 26.9183L54.1894 20.8458C54.7188 22.9765 55 25.2054 55 27.5C55 42.6879 42.6879 55 27.5 55C12.3122 55 0 42.6879 0 27.5C0 12.3122 12.3122 0 27.5 0C29.7946 0 32.0235 0.281025 34.1542 0.810532L28.0817 6.88304Z" fill="currentColor" className="text-[#745B00] group-hover:text-[#FFE180] transition-colors duration-300" />
+                                        <path d="M13.75 27.4999C13.75 21.0929 18.132 15.7094 24.0625 14.183V21.5446C22.0076 22.7333 20.625 24.9551 20.625 27.4999C20.625 31.2968 23.703 34.3749 27.5 34.3749C30.0447 34.3749 32.2665 32.9923 33.4553 30.9374H40.8169C39.2903 36.8679 33.9069 41.25 27.5 41.25C19.9061 41.25 13.75 35.0938 13.75 27.4999Z" fill="currentColor" className="text-[#745B00] group-hover:text-[#FFE180] transition-colors duration-300" />
+                                        <path d="M48.125 6.875L44.6875 0L34.375 10.3125V15.7637L26.7881 23.3506L31.6495 28.2119L39.2363 20.625H44.6875L55 10.3125L48.125 6.875Z" fill="currentColor" className="text-[#745B00] group-hover:text-[#FFE180] transition-colors duration-300" />
+                                    </g>
+                                    <defs>
+                                        <clipPath id="clip0_208_39">
+                                            <rect width="55" height="55" fill="white" />
+                                        </clipPath>
+                                    </defs>
                                 </svg>
-                                <h3 className="text-xl font-extrabold text-gray-900 mb-4 uppercase tracking-wide group-hover:text-[#C5A028] transition-colors duration-300">
+                                <h3 className="text-xl font-extrabold text-gray-900 mb-4 uppercase tracking-wide group-hover:text-white transition-colors duration-300 mt-6">
                                     {t("direction.mission_title")}
                                 </h3>
-                                <p className="text-gray-600 text-sm leading-relaxed">
+                                {/* প্যারাগ্রাফ হোভার কালার পরিবর্তন */}
+                                <p className="text-gray-600 group-hover:text-gray-200 text-sm leading-relaxed transition-colors duration-300">
                                     {t("direction.mission_desc")}
                                 </p>
                             </div>
-                            <div className="w-12 h-1.5 bg-[#C5A028] mt-10 transition-all duration-500 group-hover:w-full" />
+                            {/* ডেকোরেশন ডিভ হোভার ব্যাকগ্রাউন্ড পরিবর্তন (requirement): #FFE180 */}
+                            <div className="w-12 h-1.5 bg-[#745B00] mt-10 transition-all duration-500 group-hover:bg-[#FFE180]" />
                         </div>
 
-                        {/* Card 2: Our Vision (Highlighted) */}
-                        <div className="group bg-[#1a1a1a] border border-[#C5A028] p-8 lg:p-10 flex flex-col justify-between shadow-2xl scale-100 lg:scale-105 z-10 cursor-pointer transition-all duration-300 hover:scale-105 lg:hover:scale-110 hover:border-[#FFC300] hover:shadow-[0_0_30px_rgba(197,160,40,0.3)]">
+                        {/* Card 2: Our Vision */}
+                        {/* ডিফল্ট হাইলাইট সরিয়ে ১ এবং ৩ এর মতো করা হয়েছে। হোভার স্টাইল unified। ছবির মতো ডার্ক ব্যাকগ্রাউন্ড, স্কেল ১০৫%, এবং কালার পরিবর্তন */}
+                        <div className="group bg-white p-8 lg:p-10 flex flex-col justify-between shadow-xl cursor-pointer transition-all duration-300 hover:scale-105 hover:bg-[#454747] hover:shadow-2xl z-20 scale-100">
                             <div>
-                                <svg className="w-10 h-10 text-[#C5A028] mb-6 transition-transform duration-300 group-hover:scale-110 group-hover:rotate-12" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                {/* আইকন ডিফল্ট কালার: #745B00। হোভার কালার (requirement): #FFE180 */}
+                                <svg className="w-12 h-12 text-[#745B00] group-hover:text-[#FFE180] transition-colors duration-300 mb-6 transition-transform duration-300 group-hover:scale-110" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
                                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
                                 </svg>
-                                <h3 className="text-xl font-extrabold text-white mb-4 uppercase tracking-wide group-hover:text-[#C5A028] transition-colors duration-300">
+                                {/* টাইটেল ডিফল্ট কালার text-gray-900। হোভার text-white */}
+                                <h3 className="text-xl font-extrabold text-gray-900 mb-4 uppercase tracking-wide group-hover:text-white transition-colors duration-300">
                                     {t("direction.vision_title")}
                                 </h3>
-                                <p className="text-gray-400 text-sm leading-relaxed group-hover:text-gray-300 transition-colors duration-300">
+                                {/* প্যারাগ্রাফ হোভার কালার পরিবর্তন */}
+                                <p className="text-gray-600 group-hover:text-gray-200 text-sm leading-relaxed transition-colors duration-300">
                                     {t("direction.vision_desc")}
                                 </p>
                             </div>
-                            <div className="w-12 h-1.5 bg-[#C5A028] mt-10 transition-all duration-500 group-hover:w-full" />
+                            {/* ডেকোরেশন ডিভ হোভার ব্যাকগ্রাউন্ড পরিবর্তন (requirement): #FFE180 */}
+                            <div className="w-12 h-1.5 bg-[#745B00] mt-10 transition-all duration-500 group-hover:bg-[#FFE180]" />
                         </div>
 
                         {/* Card 3: Our Goals */}
-                        <div className="group bg-white p-8 lg:p-10 flex flex-col justify-between shadow-xl cursor-pointer transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl hover:bg-[#fffbf0]">
+                        {/* হোভার স্টাইল: ছবির মতো ডার্ক ব্যাকগ্রাউন্ড, স্কেল ১০৫%, এবং কালার পরিবর্তন */}
+                        <div className="group bg-white p-8 lg:p-10 flex flex-col justify-between shadow-xl cursor-pointer transition-all duration-300 hover:scale-105 hover:bg-[#454747] hover:shadow-2xl z-20">
                             <div>
-                                <svg className="w-10 h-10 text-[#C5A028] mb-6 transition-transform duration-300 group-hover:scale-110" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                {/* আইকন ডিফল্ট কালার: #745B00। হোভার কালার (requirement): #FFE180 */}
+                                <svg className="w-12 h-12 text-[#745B00] group-hover:text-[#FFE180] transition-colors duration-300 mb-6 transition-transform duration-300 group-hover:scale-110" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 21v-4m0 0V5a2 2 0 012-2h6.5l1 1H21l-3 6 3 6h-8.5l-1-1H5a2 2 0 00-2 2zm9-13.5V9" />
                                 </svg>
-                                <h3 className="text-xl font-extrabold text-gray-900 mb-4 uppercase tracking-wide group-hover:text-[#C5A028] transition-colors duration-300">
+                                <h3 className="text-xl font-extrabold text-gray-900 mb-4 uppercase tracking-wide group-hover:text-white transition-colors duration-300">
                                     {t("direction.goals_title")}
                                 </h3>
-                                <p className="text-gray-600 text-sm leading-relaxed">
+                                {/* প্যারাগ্রাফ হোভার কালার পরিবর্তন */}
+                                <p className="text-gray-600 group-hover:text-gray-200 text-sm leading-relaxed transition-colors duration-300">
                                     {t("direction.goals_desc")}
                                 </p>
                             </div>
-                            <div className="w-12 h-1.5 bg-[#C5A028] mt-10 transition-all duration-500 group-hover:w-full" />
+                            {/* ডেকোরেশন ডিভ হোভার ব্যাকগ্রাউন্ড পরিবর্তন (requirement): #FFE180 */}
+                            <div className="w-12 h-1.5 bg-[#745B00] mt-10 transition-all duration-500 group-hover:bg-[#FFE180]" />
                         </div>
 
                     </div>

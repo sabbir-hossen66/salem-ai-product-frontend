@@ -17,7 +17,7 @@ const HeroWithCards = () => {
         <div className="absolute inset-0 z-0">
           <Image
             // এখানে আপনার ব্যাকগ্রাউন্ড ইমেজের আসল পাথ দিন
-            src="https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=2000&auto=format&fit=crop"
+            src="https://i.ibb.co.com/XxmsDvWP/6da230868cf47e5ec9bfe12ef54ed9ff69d08153.png"
             alt="Hero background"
             fill
             className="object-cover opacity-30" 
