@@ -9,7 +9,7 @@ export default function DirectionAndValuesSection() {
     // মাউস মুভমেন্ট ট্র্যাক করার জন্য স্টেট
     const [offset, setOffset] = useState({ x: 0, y: 0 });
 
-    const handleMouseMove = (e) => {
+    const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
         // স্ক্রিনের কেন্দ্রবিন্দু থেকে মাউসের দূরত্ব বের করা হচ্ছে (সেন্সিটিভিটি 30)
         const x = (e.clientX - window.innerWidth / 2) / 30; 
         const y = (e.clientY - window.innerHeight / 2) / 30;
