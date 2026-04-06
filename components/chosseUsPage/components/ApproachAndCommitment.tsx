@@ -6,6 +6,11 @@ import { useLang } from '@/context/LanguageContext';
 const ApproachAndCommitment = () => {
   const { t } = useLang();
 
+  // Common styles for all 3 cards to keep them uniform
+  // Default: transparent border, no background, no shadow
+  // Hover: white background, top border colored, shadow, translate upwards
+  const cardContainerClass = "p-4 md:p-6 group cursor-pointer rounded-sm border-t-4 border-transparent transition-all duration-300 hover:bg-white hover:shadow-xl hover:border-[#A48639] hover:-translate-y-4";
+
   return (
     <div className="w-full font-sans">
 
@@ -36,7 +41,7 @@ const ApproachAndCommitment = () => {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-start">
 
             {/* Card 1 */}
-            <div className="p-4 md:p-6 group cursor-pointer rounded-sm transition-all duration-300 hover:bg-white hover:shadow-xl hover:-translate-y-2">
+            <div className={cardContainerClass}>
               <span className="text-[#A48639] font-bold text-sm mb-4 block transition-colors duration-300">
                 {t("approach.card1_num")}
               </span>
@@ -59,9 +64,9 @@ const ApproachAndCommitment = () => {
               <div className="mt-4 h-[2px] w-0 bg-[#A48639] transition-all duration-500 group-hover:w-full" />
             </div>
 
-            {/* Card 2 (Highlighted) */}
-            <div className="bg-white p-6 shadow-xl border-t-4 border-[#A48639] transform md:-translate-y-4 group cursor-pointer rounded-sm transition-all duration-300 hover:shadow-2xl hover:-translate-y-6 hover:border-t-8">
-              <span className="text-[#A48639] font-bold text-sm mb-4 block">
+            {/* Card 2 */}
+            <div className={cardContainerClass}>
+              <span className="text-[#A48639] font-bold text-sm mb-4 block transition-colors duration-300">
                 {t("approach.card2_num")}
               </span>
               <div className="overflow-hidden rounded-sm mb-6">
@@ -79,12 +84,13 @@ const ApproachAndCommitment = () => {
               <p className="text-gray-500 text-sm leading-relaxed">
                 {t("approach.card2_desc")}
               </p>
+              {/* Bottom gold line */}
               <div className="mt-4 h-[2px] w-0 bg-[#A48639] transition-all duration-500 group-hover:w-full" />
             </div>
 
             {/* Card 3 */}
-            <div className="p-4 md:p-6 group cursor-pointer rounded-sm transition-all duration-300 hover:bg-white hover:shadow-xl hover:-translate-y-2">
-              <span className="text-[#A48639] font-bold text-sm mb-4 block">
+            <div className={cardContainerClass}>
+              <span className="text-[#A48639] font-bold text-sm mb-4 block transition-colors duration-300">
                 {t("approach.card3_num")}
               </span>
               <div className="overflow-hidden rounded-sm mb-6">
@@ -102,6 +108,7 @@ const ApproachAndCommitment = () => {
               <p className="text-gray-500 text-sm leading-relaxed">
                 {t("approach.card3_desc")}
               </p>
+              {/* Bottom gold line */}
               <div className="mt-4 h-[2px] w-0 bg-[#A48639] transition-all duration-500 group-hover:w-full" />
             </div>
 
@@ -114,7 +121,6 @@ const ApproachAndCommitment = () => {
           BOTTOM SECTION: Our Commitment
       ========================================= */}
       <section className="bg-[#111111] py-20 lg:py-32 px-6 lg:px-24">
-        {/* Changed items-center to items-stretch to make columns equal height */}
         <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-stretch gap-12 lg:gap-20">
 
           {/* Left Side (Image) */}
