@@ -25,7 +25,7 @@ export default function CallToAction() {
                     {/* Solid Button */}
                     <a 
                         href="#" 
-                        className="w-full sm:w-auto flex items-center justify-center px-8 py-3.5 bg-[#9A7B26] text-white text-sm font-bold tracking-wide hover:bg-[#856920] transition-colors shadow-sm"
+                        className="w-full sm:w-auto flex items-center justify-center px-8 py-3.5 bg-[linear-gradient(105deg,#745B00_0%,#FFC300_100%)] text-white text-sm font-bold tracking-wide hover:bg-[#856920] transition-colors shadow-sm"
                     >
                         {t("cta.portfolio")}
                         <svg className="w-4 h-4 ml-2 rtl:ml-0 rtl:mr-2 rtl:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -36,7 +36,7 @@ export default function CallToAction() {
                     {/* Outline Button */}
                     <a 
                         href="#" 
-                        className="w-full sm:w-auto flex items-center justify-center px-8 py-3.5 border border-[#9A7B26] text-gray-900 text-sm font-bold tracking-wide hover:bg-[#9A7B26] hover:text-white transition-colors"
+                        className="w-full sm:w-auto flex items-center justify-center px-8 py-3.5 border border-[#9A7B26] text-[#9A7B26] text-sm font-bold tracking-wide transition-colors"
                     >
                         {t("cta.contact")}
                         <svg className="w-4 h-4 ml-2 rtl:ml-0 rtl:mr-2 rtl:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">

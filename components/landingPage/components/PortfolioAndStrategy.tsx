@@ -38,11 +38,11 @@ export default function PortfolioAndStrategy() {
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-10 items-start">
                         
                         {/* Card 1 */}
-                        <div className="flex flex-col group pt-4">
+                        <div className="flex flex-col group border-t-4 border-transparent pt-4 px-0 pb-0 hover:bg-[#FAF8F4] hover:p-6 lg:hover:p-8 hover:border-[#C5A028] hover:shadow-sm transition-all duration-300">
                             <h4 className="text-[#C5A028] font-bold text-sm mb-4">{t("portfolio.card1_num")}</h4>
                             <div className="w-full aspect-[16/10] relative mb-6 overflow-hidden">
                                 <Image 
-                                    src="https://images.unsplash.com/photo-1512453979798-5ea266f8880c?q=80&w=1632&auto=format&fit=crop" 
+                                    src="https://i.ibb.co.com/HfGs55zc/062390afc8e464ca128e15270591ee68564cbb03.png" 
                                     alt="Cityscape"
                                     fill
                                     className="object-cover transition-transform duration-500 group-hover:scale-105"
@@ -54,12 +54,12 @@ export default function PortfolioAndStrategy() {
                             </p>
                         </div>
 
-                        {/* Card 2 (Highlighted with Background and Top Border) */}
-                        <div className="flex flex-col bg-[#FAF8F4] p-6 lg:p-8 border-t-4 border-[#C5A028] shadow-sm group">
+                        {/* Card 2 */}
+                        <div className="flex flex-col group border-t-4 border-transparent pt-4 px-0 pb-0 hover:bg-[#FAF8F4] hover:p-6 lg:hover:p-8 hover:border-[#C5A028] hover:shadow-sm transition-all duration-300">
                             <h4 className="text-[#C5A028] font-bold text-sm mb-4">{t("portfolio.card2_num")}</h4>
                             <div className="w-full aspect-[16/10] relative mb-6 overflow-hidden">
                                 <Image 
-                                    src="https://i.ibb.co.com/R47Ctrj2/81e094e712059e182faad87fa952c0e7dbbb9782.png" 
+                                    src="https://i.ibb.co.com/MyfKsyFD/81e094e712059e182faad87fa952c0e7dbbb9782.png" 
                                     alt="Office Flags"
                                     fill
                                     className="object-cover transition-transform duration-500 group-hover:scale-105"
@@ -72,11 +72,11 @@ export default function PortfolioAndStrategy() {
                         </div>
 
                         {/* Card 3 */}
-                        <div className="flex flex-col group pt-4">
+                        <div className="flex flex-col group border-t-4 border-transparent pt-4 px-0 pb-0 hover:bg-[#FAF8F4] hover:p-6 lg:hover:p-8 hover:border-[#C5A028] hover:shadow-sm transition-all duration-300">
                             <h4 className="text-[#C5A028] font-bold text-sm mb-4">{t("portfolio.card3_num")}</h4>
                             <div className="w-full aspect-[16/10] relative mb-6 overflow-hidden">
                                 <Image 
-                                    src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?q=80&w=1632&auto=format&fit=crop" 
+                                    src="https://i.ibb.co.com/j9rwCNxV/d9c43695f0b6644e777cdefacd54ae61b4ae6d70.png" 
                                     alt="Business Meeting"
                                     fill
                                     className="object-cover transition-transform duration-500 group-hover:scale-105"
