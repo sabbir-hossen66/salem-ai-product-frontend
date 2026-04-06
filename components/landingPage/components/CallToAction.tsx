@@ -35,7 +35,7 @@ export default function CallToAction() {
                     
                     {/* Outline Button */}
                     <a 
-                        href="#" 
+                        href="contact-us" 
                         className="w-full sm:w-auto flex items-center justify-center px-8 py-3.5 border border-[#9A7B26] text-[#9A7B26] text-sm font-bold tracking-wide transition-colors"
                     >
                         {t("cta.contact")}

@@ -2,6 +2,7 @@
 import Image from 'next/image';
 import React, { useEffect, useRef, useState } from 'react';
 import { useLang } from '@/context/LanguageContext';
+import Link from 'next/link';
 
 /* ── Count-up hook: 0 থেকে শুরু, viewport-এ আসলে animate ── */
 function useCountUp(ref: React.RefObject<HTMLDivElement | null>, target: number, duration = 2400) {
@@ -78,6 +79,7 @@ export default function Hero() {
                         </p>
 
                         <div className={`flex flex-col sm:flex-row gap-4 ${isAr ? "sm:flex-row-reverse justify-end" : ""}`}>
+                          <Link href="/why-choose-us">
                             <button className="cursor-pointer bg-gradient-to-r from-[#745B00] to-[#FFC300] text-white px-8 py-3.5 flex justify-center items-center gap-2 font-semibold hover:opacity-90 transition-opacity shadow-md">
                                  {t("hero.btn1")}
                                 {isAr && (
@@ -93,6 +95,8 @@ export default function Hero() {
                                     </svg>
                                 )}
                             </button>
+                          </Link>
+                           <Link href="/sectors">
                             <button className="cursor-pointer border border-[#C5A028] text-[#745B00] bg-white px-8 py-3.5 flex justify-center items-center gap-2 font-semibold hover:bg-[#C5A028] hover:text-white transition-colors shadow-sm">
                                  {t("hero.btn2")}
                                 {isAr && (
@@ -107,6 +111,7 @@ export default function Hero() {
                                     </svg>
                                 )}
                             </button>
+                           </Link>
                         </div>
                     </div>
                 </div>
